@@ -3,21 +3,28 @@
 
 
     
-    
   <url>
-    <loc>http://yoursite.com/2016/10/26/hello-world/</loc>
-    <lastmod>2016-10-26T07:08:10.000Z</lastmod>
+    <loc>http://yoursite.com/2016/10/26/mac%20install%20tensorflow/</loc>
+    <lastmod>2016-10-26T09:57:43.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2016-10-26T06:57:13.000Z</pubTime>
+        <title>Mac install tensorflow</title>
+        <pubTime>2016-10-26T02:46:20.000Z</pubTime>
         
+        <tag>deepLearning</tag>
+         
+        <tag>tensorflow</tag>
+         
          
            
+             
+              <breadCrumb title="deepLearning" url="http://yoursite.com/categories/deepLearning/"/>
+          
         </display>
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://yoursite.com/2016/10/19/sentiment%20classification/</loc>
