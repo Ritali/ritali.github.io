@@ -5,21 +5,6 @@
     
     
   <url>
-    <loc>http://yoursite.com/2016/10/26/hello-world/</loc>
-    <lastmod>2016-10-26T07:08:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-10-26T06:57:13.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/10/19/hexo-blog-start/</loc>
     <lastmod>2016-10-26T07:08:10.000Z</lastmod>
     <data>
@@ -34,6 +19,21 @@
              
               <breadCrumb title="tools" url="http://yoursite.com/categories/tools/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/10/26/hello-world/</loc>
+    <lastmod>2016-10-26T07:08:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-10-26T06:57:13.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
