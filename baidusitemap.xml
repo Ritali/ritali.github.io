@@ -21,26 +21,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/10/19/sentiment%20classification/</loc>
-    <lastmod>2016-10-26T07:08:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>跨语言情感分析</title>
-        <pubTime>2016-10-19T02:46:20.000Z</pubTime>
-        
-        <tag>情感分析</tag>
-         
-         
-           
-             
-              <breadCrumb title="语义计算" url="http://yoursite.com/categories/%E8%AF%AD%E4%B9%89%E8%AE%A1%E7%AE%97/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/10/19/hexo-blog-start/</loc>
     <lastmod>2016-10-26T07:08:10.000Z</lastmod>
     <data>
@@ -54,6 +34,26 @@
            
              
               <breadCrumb title="tools" url="http://yoursite.com/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/10/19/sentiment%20classification/</loc>
+    <lastmod>2016-10-26T07:08:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>跨语言情感分析</title>
+        <pubTime>2016-10-19T02:46:20.000Z</pubTime>
+        
+        <tag>情感分析</tag>
+         
+         
+           
+             
+              <breadCrumb title="语义计算" url="http://yoursite.com/categories/%E8%AF%AD%E4%B9%89%E8%AE%A1%E7%AE%97/"/>
           
         </display>
     </data>
