@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, Ritali" />
+  <meta name="keywords" content="python,multiThread," />
 
 
 
@@ -85,15 +85,16 @@
 
 
 
-<meta name="description" content="live better and better">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ritali's blog">
-<meta property="og:url" content="http://ritali.github.io/tags/情感分析/index.html">
+<meta name="description" content="Python 多线程举例12345678910111213141516171819from multiprocessing import *NUM_THREAD = 10p = Pool(NUM_THREAD)start = 0offset = NUM_THREADqueries = get_quries(&amp;quot;./test.txt&amp;quot;) # 获取所有的任务列表cnt = 0 # 任">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Multiple Threads">
+<meta property="og:url" content="http://ritali.github.io/2016/12/11/python-multi-thread/index.html">
 <meta property="og:site_name" content="Ritali's blog">
-<meta property="og:description" content="live better and better">
+<meta property="og:description" content="Python 多线程举例12345678910111213141516171819from multiprocessing import *NUM_THREAD = 10p = Pool(NUM_THREAD)start = 0offset = NUM_THREADqueries = get_quries(&amp;quot;./test.txt&amp;quot;) # 获取所有的任务列表cnt = 0 # 任">
+<meta property="og:updated_time" content="2016-12-11T11:56:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ritali's blog">
-<meta name="twitter:description" content="live better and better">
+<meta name="twitter:title" content="Python Multiple Threads">
+<meta name="twitter:description" content="Python 多线程举例12345678910111213141516171819from multiprocessing import *NUM_THREAD = 10p = Pool(NUM_THREAD)start = 0offset = NUM_THREADqueries = get_quries(&amp;quot;./test.txt&amp;quot;) # 获取所有的任务列表cnt = 0 # 任">
 
 
 
@@ -114,10 +115,10 @@
 
 
 
-  <link rel="canonical" href="http://ritali.github.io/tags/情感分析/"/>
+  <link rel="canonical" href="http://ritali.github.io/2016/12/11/python-multi-thread/"/>
 
 
-  <title> Tag: 情感分析 | Ritali's blog </title>
+  <title> Python Multiple Threads | Ritali's blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -138,7 +139,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -236,46 +237,153 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        情感分析
-        <small>Tag</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Python Multiple Threads
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-12-11T18:17:20+08:00" content="2016-12-11">
+              2016-12-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          <span>&nbsp; | &nbsp; 
+          visited: &nbsp; <span id="busuanzi_value_page_pv" ></span>
+          </span>    
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
+      
+        <h2 id="Python-多线程举例"><a href="#Python-多线程举例" class="headerlink" title="Python 多线程举例"></a>Python 多线程举例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">from multiprocessing import *</div><div class="line"></div><div class="line">NUM_THREAD = 10</div><div class="line">p = Pool(NUM_THREAD)</div><div class="line">start = 0</div><div class="line">offset = NUM_THREAD</div><div class="line">queries = get_quries(&quot;./test.txt&quot;) # 获取所有的任务列表</div><div class="line">cnt = 0 # 任务的数量</div><div class="line">while (start &lt; len(queries)):</div><div class="line">end = start + offset</div><div class="line">pool_queries = queries[start : end] # 每次取线程个数的任务列表</div><div class="line">rslt = p.map(get_qa_rslt, pool_queries) # get_qa_result 是一个函数，调用函数和当前线程的任务列表， rslt保存函数返回值</div><div class="line">for i in range(len(pool_queries)):</div><div class="line">  q = pool_queries[i].strip()</div><div class="line">  task = rslt[i]</div><div class="line">  cnt += 1</div><div class="line">  print task</div><div class="line">start = end # 准备下一轮线程</div><div class="line">return cnt</div></pre></td></tr></table></figure>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/10/19/sentiment classification/" itemprop="url">
-              
-                <span itemprop="name">跨语言情感分析</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-19T10:46:20+08:00"
-              content="2016-10-19" >
-          10-19
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+            <a href="/tags/multiThread/" rel="tag">#multiThread</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/26/mac install tensorflow/" rel="next" title="Mac install tensorflow">
+                <i class="fa fa-chevron-left"></i> Mac install tensorflow
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/11/git-use/" rel="prev" title="Git Tools">
+                Git Tools <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -283,6 +391,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -500,6 +612,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
