@@ -69,7 +69,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="情感分析," />
+  <meta name="keywords" content="git," />
 
 
 
@@ -85,16 +85,33 @@
 
 
 
-<meta name="description" content="1. 基本任务和方法任务：NLPCC2013跨语言情感分类（英文-&amp;gt;中文）环境：Ubuntu 服务器（4 Intel(R) Xeon(R)CPU E5-2609 v3  @1.90GHz），Anacanda2.4（64-bit），python2.7基本方法：（1）中文SVM分类；（2）英文SVM分类；（3）英文SVM自学习评价标准：准确率(Accuracy)Accuracy = #syste">
+<meta name="description" content="Git Use分支建立和删除新建分支1git checkout -b branch1
+转换到本地 master 分支1git checkout master
+删除本地分支1git branch -d branch1
+查看远程分支1git branch -a
+删除远程分支1git push origin --delete branch1
+删除不存在对应远程分支的本地分支123git remote p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="跨语言情感分析">
-<meta property="og:url" content="http://ritali.github.io/2016/10/19/sentiment classification/index.html">
+<meta property="og:title" content="Git Tools">
+<meta property="og:url" content="http://ritali.github.io/2016/12/11/git-use/index.html">
 <meta property="og:site_name" content="Ritali's blog">
-<meta property="og:description" content="1. 基本任务和方法任务：NLPCC2013跨语言情感分类（英文-&amp;gt;中文）环境：Ubuntu 服务器（4 Intel(R) Xeon(R)CPU E5-2609 v3  @1.90GHz），Anacanda2.4（64-bit），python2.7基本方法：（1）中文SVM分类；（2）英文SVM分类；（3）英文SVM自学习评价标准：准确率(Accuracy)Accuracy = #syste">
-<meta property="og:updated_time" content="2016-10-26T07:08:10.000Z">
+<meta property="og:description" content="Git Use分支建立和删除新建分支1git checkout -b branch1
+转换到本地 master 分支1git checkout master
+删除本地分支1git branch -d branch1
+查看远程分支1git branch -a
+删除远程分支1git push origin --delete branch1
+删除不存在对应远程分支的本地分支123git remote p">
+<meta property="og:image" content="http://image.beekka.com/blog/2014/bg2014061202.jpg">
+<meta property="og:updated_time" content="2016-12-11T11:23:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="跨语言情感分析">
-<meta name="twitter:description" content="1. 基本任务和方法任务：NLPCC2013跨语言情感分类（英文-&amp;gt;中文）环境：Ubuntu 服务器（4 Intel(R) Xeon(R)CPU E5-2609 v3  @1.90GHz），Anacanda2.4（64-bit），python2.7基本方法：（1）中文SVM分类；（2）英文SVM分类；（3）英文SVM自学习评价标准：准确率(Accuracy)Accuracy = #syste">
+<meta name="twitter:title" content="Git Tools">
+<meta name="twitter:description" content="Git Use分支建立和删除新建分支1git checkout -b branch1
+转换到本地 master 分支1git checkout master
+删除本地分支1git branch -d branch1
+查看远程分支1git branch -a
+删除远程分支1git push origin --delete branch1
+删除不存在对应远程分支的本地分支123git remote p">
+<meta name="twitter:image" content="http://image.beekka.com/blog/2014/bg2014061202.jpg">
 
 
 
@@ -115,10 +132,10 @@
 
 
 
-  <link rel="canonical" href="http://ritali.github.io/2016/10/19/sentiment classification/"/>
+  <link rel="canonical" href="http://ritali.github.io/2016/12/11/git-use/"/>
 
 
-  <title> 跨语言情感分析 | Ritali's blog </title>
+  <title> Git Tools | Ritali's blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="en">
@@ -258,7 +275,7 @@
             
             
               
-                跨语言情感分析
+                Git Tools
               
             
           </h1>
@@ -270,8 +287,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-19T10:46:20+08:00" content="2016-10-19">
-              2016-10-19
+            <time itemprop="dateCreated" datetime="2016-12-11T18:17:20+08:00" content="2016-12-11">
+              2016-12-11
             </time>
           </span>
 
@@ -284,8 +301,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/语义计算/" itemprop="url" rel="index">
-                    <span itemprop="name">语义计算</span>
+                  <a href="/categories/tools/" itemprop="url" rel="index">
+                    <span itemprop="name">tools</span>
                   </a>
                 </span>
 
@@ -323,18 +340,27 @@
       
 
       
-        <h5 id="1-基本任务和方法"><a href="#1-基本任务和方法" class="headerlink" title="1. 基本任务和方法"></a>1. 基本任务和方法</h5><p>任务：NLPCC2013跨语言情感分类（英文-&gt;中文）<br>环境：Ubuntu 服务器（4 Intel(R) Xeon(R)CPU E5-2609 v3  @1.90GHz），Anacanda2.4（64-bit），python2.7<br>基本方法：（1）中文SVM分类；（2）英文SVM分类；（3）英文SVM自学习<br>评价标准：准确率(Accuracy)<br>Accuracy = #system_correct / #system_total<br>其中#system_correct表示分类准确的评论数，#system_total表示测试集内全部评论数。</p>
-<h5 id="2-数据预处理"><a href="#2-数据预处理" class="headerlink" title="2. 数据预处理"></a>2. 数据预处理</h5><p>主要包括XML原文件解析，语料翻译，去除特殊符号。<br>（1）  解析XML<br>所需要的模块：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> xml.etree <span class="keyword">import</span> ElementTree <span class="keyword">as</span> ET  <span class="comment">#引入解析xml文件的模块  </span></div><div class="line"><span class="keyword">import</span> re  </div><div class="line"><span class="keyword">import</span> gTrans</div></pre></td></tr></table></figure></p>
-<p>详细代码：googleTranslate.extractXMLEnglishText()<br>（2）  调用google translator API，进行翻译<br>训练数据英文翻译成中文，测试数据中文翻译成英文，翻译完成后，每篇评论都有中英两种表示。<br>所需要的模块：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re  </div><div class="line"><span class="keyword">import</span> string  </div><div class="line"><span class="keyword">import</span> urllib,urllib2  <span class="comment">#引入接入网络接口API的模块  </span></div><div class="line"><span class="keyword">import</span> gTrans</div></pre></td></tr></table></figure></p>
-<p>详细代码：googleTranslate.translate(text, f, t)<br>参数说明：text为输入文本，f为原语言，t为目标语言<br>（3）  去除标点符号<br>语料中有很多符号，影响分类效果，需要单独去除。<br>详细代码：googleTranslate.delPunctuationStr(str)</p>
-<h5 id="3-模型训练"><a href="#3-模型训练" class="headerlink" title="3. 模型训练"></a>3. 模型训练</h5><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">def subClassifier(language)：  </div><div class="line"> 	#合并同语言的训练数据，提取训练数据，代码省略  </div><div class="line"> 	#classifier() 训练模型  </div><div class="line">	classifier(train_data, train_target,test_data, test_target, language)</div></pre></td></tr></table></figure>
-<p>调用模块：调用Python的机器学习模块sklearn，使用pipline简化过程。<br>算法：朴素贝叶斯，SVM，随机森林。<br>（1）  英文分类器<br>训练数据：已标注的英文语料 + 少量已标注的中文语料翻译成英文标注语料<br>测试数据：未标注的中文测试语料翻译成英文语料<br>参数设置：<br>以SVM为例：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">text_clf_svm = Pipeline([(<span class="string">'vect'</span>, CountVectorizer(stop_words =<span class="string">'english'</span>)),  </div><div class="line">     (<span class="string">'tfidf'</span>, TfidfTransformer()),  </div><div class="line">     (<span class="string">'clf'</span>, svm.SVC( C=<span class="number">1</span>,kernel = <span class="string">'linear'</span>)),  </div><div class="line">     ])</div></pre></td></tr></table></figure></p>
-<p>（2）  中文分类器<br>训练数据：已标注的英文语料翻译成中文标注语料 + 少量已标注的中文语料<br>测试数据：未标注的中文测试语料<br>参数设置：同（1）<br>（3）自学习分类器<br>利用已有的英文标注数据D0训练一个弱分类器M0，然后将中文未标注数据翻译成英文D1，弱分类器预测D1，将D1中得分最高的topK条数据（K条正向评论，K条负向评论）加入到D0 中，构成新的训练集，同时D1中删除对应的topK条评论。<br>不断迭代上面的过程，直到准确率不再上升终止（考虑到时间问题，只迭代了50次）。</p>
-<h5 id="4-结果对比与分析"><a href="#4-结果对比与分析" class="headerlink" title="4. 结果对比与分析"></a>4. 结果对比与分析</h5><p>4.1 实验结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">algorithm\data | book | dvd | music</div><div class="line">:----------- | :-----------: | -----------:</div><div class="line">NB(EN) | 0.698 | 0.72375 | 0.70625</div><div class="line">SVM(EN) | 0.76 | 0.77375 | 0.76325</div><div class="line">RandomForest(EN) | 0.68275 | 0.6995 | 0.6835</div><div class="line">NB(CN)| 0.67075 | 0.70225 | 0.69225</div><div class="line">SVM(CN) | 0.72475 | 0.7355 | 0.72475</div><div class="line">RandomForest(CN) | 0.6598 | 0.68022 | 0.67023</div><div class="line">RandomForest(EN) | 0.68275 | 0.6995 | 0.6835</div><div class="line">selfLearningSVM(EN) | 0.808 | 0.801 | 0.78925</div></pre></td></tr></table></figure>
-<p>4.2 结果分析<br>1） SVM比NB，RandForest结果都高，SVM(EN)的测试准确率在76~77%之间，。<br>2） 英文分类器比中文分类器准确率高，因为英文分类器的训练集是已标注的数据，中文分类器的训练数据是从英文标注数据翻译过来的，机器翻译的准确性影响最后的效果。<br>3） 自学习过程不断通过不断增大训练集，使得分类器的效果更准确。<br>4） 分类器训练运行时间供参考，机器配置对实验时间有很大的影响。</p>
-<p>4.3 总结<br>本文尝试了多种跨语言情感分类的方法，主要以SVM为主。由于训练有监督的分类器需要大量的已标注数据（本任务只提供12000条评论），所以采用了利用已有数据训练弱分类器，然后通过自学习过程，不断迭代增加训练数据的方法，得到更准确的分类器。实验证明这一方法确实有效，需要注意的是，考虑到自学习过程存在一定的误差，本文只在12000条未标注评论（小于已有训练数据）选择得分最高的topK加入训练集中。可做的改进是将中英文子分类的结果结合起来，即co-training过程，提高准确性。<br>另外，神经网络也可以用来做情感分类的过程，由于时间限制，神经网络的实验在报告里省略了。</p>
-<h5 id="5-问题及解决办法"><a href="#5-问题及解决办法" class="headerlink" title="5. 问题及解决办法"></a>5. 问题及解决办法</h5><p>（1）解析语料时出现：xml.etree.Element.ParseError<br>原因：有一个text里没有文本（只有评论id），需要提前判断做相应的处理<br>（2）翻译限制：<br>尝试了几种google翻译小工具，如goslate，报错HTTPError: HTTP Error 503: Service Unavailable。在官网查到原因：Google has updated its translation service recently with a ticketmechanism to prevent simple crawler program like goslate from accessing。<br>python 调用google translate API进行翻译的内容详见另一篇博客：<a href="http://blog.csdn.net/lrita/article/details/51298227" target="_blank" rel="external">http://blog.csdn.net/lrita/article/details/51298227</a></p>
+        <h1 id="Git-Use"><a href="#Git-Use" class="headerlink" title="Git Use"></a>Git Use</h1><h3 id="分支建立和删除"><a href="#分支建立和删除" class="headerlink" title="分支建立和删除"></a>分支建立和删除</h3><p>新建分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b branch1</div></pre></td></tr></table></figure></p>
+<p>转换到本地 master 分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout master</div></pre></td></tr></table></figure></p>
+<p>删除本地分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -d branch1</div></pre></td></tr></table></figure></p>
+<p>查看远程分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -a</div></pre></td></tr></table></figure></p>
+<p>删除远程分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin --delete branch1</div></pre></td></tr></table></figure></p>
+<p>删除不存在对应远程分支的本地分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git remote prune origin 可以将其从本地版本库中去除。</div><div class="line">#更简单的方法是使用这个命令，它在fetch之后删除掉没有与远程分支对应的本地分支：</div><div class="line">git fetch -p</div></pre></td></tr></table></figure></p>
+<p>重命名远程分支<br>在git中重命名远程分支，其实就是先删除远程分支，然后重命名本地分支，再重新提交一个远程分支。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">git branch -av</div><div class="line">删除远程分支：</div><div class="line">git push --delete origin devel（如果出错可能devel是默认分支）</div><div class="line">重命名本地分支：</div><div class="line">git branch -m devel develop</div><div class="line">推送本地分支：</div><div class="line">git push origin develop</div><div class="line"></div><div class="line">git pull origin branch1 //从远程分支下载</div></pre></td></tr></table></figure></p>
+<h3 id="撤销add的修改"><a href="#撤销add的修改" class="headerlink" title="撤销add的修改"></a>撤销add的修改</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git checkout -- file1 //add之前想恢复到改变之前的状态，</div><div class="line">git reset HEAD file // or fileDir</div></pre></td></tr></table></figure>
+<h3 id="fetch-merge-pull"><a href="#fetch-merge-pull" class="headerlink" title="fetch + merge = pull"></a>fetch + merge = pull</h3><p>默认情况下，git fetch取回所有分支（branch）的更新。如果只想取回特定分支的更新，可以指定分支名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git fetch &lt;远程主机名&gt; &lt;分支名&gt;</div></pre></td></tr></table></figure></p>
+<p>比如，取回origin主机的master分支。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git fetch origin master</div></pre></td></tr></table></figure></p>
+<p>所取回的更新，在本地主机上要用”远程主机名/分支名”的形式读取。比如origin主机的master，就要用origin/master读取。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git reset --hard origin/master</div><div class="line">git merge origin/master (当前分支与远程master合并)</div></pre></td></tr></table></figure></p>
+<p>取回远程主机的更新以后，可以在它的基础上，使用git checkout命令创建一个新的分支。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b newBrach origin/master</div></pre></td></tr></table></figure></p>
+<p>上面命令表示，在origin/master的基础上，创建一个新分支。<br>此外，也可以使用git merge命令或者git rebase命令，在本地分支上合并远程分支。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ git merge origin/master</div><div class="line"># 或者</div><div class="line">$ git rebase origin/master</div><div class="line">上面命令表示在当前分支上，合并origin/master。</div><div class="line">git pull = git fetch + merge to local</div><div class="line"></div><div class="line"># 当你在 master 下</div><div class="line">$ git pull</div><div class="line"># 等于 fetch origin，然后 merge origin/master</div><div class="line"></div><div class="line"># 当你在 develop 下</div><div class="line">$ git pull</div><div class="line"># 等于 fetch origin，然后 merge origin/develop</div></pre></td></tr></table></figure>
+<h3 id="tag"><a href="#tag" class="headerlink" title="tag"></a>tag</h3><p>把本地tag推送到远程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push --tags</div></pre></td></tr></table></figure></p>
+<p>获取远程tag<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git fetch origin tag &lt;tagname&gt;</div></pre></td></tr></table></figure></p>
+<p>删除远程tag：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin --delete tag &lt;tagname&gt;</div></pre></td></tr></table></figure></p>
+<p>补充：分支的重要属性<br>分支确实有些特殊的属性——其中最重要的是，如果你在一个分支进行作业并创建了一个新的提交(commits)，该分支的顶端将前进到那个提交(commits)。</p>
+<h3 id="解决冲突；"><a href="#解决冲突；" class="headerlink" title="解决冲突；"></a>解决冲突；</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git fetch origin master</div><div class="line">git merge origin/master</div><div class="line">出现conflict</div><div class="line">修改conflict 文件，</div><div class="line">修改完git add， git commit -m</div></pre></td></tr></table></figure>
+<h3 id="回退到历史版本"><a href="#回退到历史版本" class="headerlink" title="回退到历史版本:"></a>回退到历史版本:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git log # 查看提交历史</div><div class="line">git fetch origin</div><div class="line">git checkout &lt;sha1-of-a-commit&gt;</div><div class="line">（正常情况下，git fetch origin， git checkout branch_name 即可， git pull origin branch_name）</div></pre></td></tr></table></figure>
+<h3 id="附Git的远程-本地仓库-本地工作空间的文件流"><a href="#附Git的远程-本地仓库-本地工作空间的文件流" class="headerlink" title="附Git的远程,本地仓库,本地工作空间的文件流"></a>附Git的远程,本地仓库,本地工作空间的文件流</h3><p><img src="http://image.beekka.com/blog/2014/bg2014061202.jpg" alt="image"></p>
 
       
     </div>
@@ -357,7 +383,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/情感分析/" rel="tag">#情感分析</a>
+            <a href="/tags/git/" rel="tag">#git</a>
           
         </div>
       
@@ -366,13 +392,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/10/26/mac install tensorflow/" rel="next" title="Mac install tensorflow">
+                <i class="fa fa-chevron-left"></i> Mac install tensorflow
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/19/hexo-blog-start/" rel="prev" title="使用hexo搭建git博客">
-                使用hexo搭建git博客 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
