@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ritali.github.io/2017/03/16/book-java-collection/</loc>
+    
+    <lastmod>2017-03-16T08:51:00.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ritali.github.io/2016/12/11/python-multi-thread/</loc>
     
     <lastmod>2016-12-11T11:56:09.000Z</lastmod>
@@ -37,14 +44,14 @@
   </url>
   
   <url>
-    <loc>http://ritali.github.io/categories/index.html</loc>
+    <loc>http://ritali.github.io/about/index.html</loc>
     
     <lastmod>2016-10-26T07:08:10.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ritali.github.io/about/index.html</loc>
+    <loc>http://ritali.github.io/categories/index.html</loc>
     
     <lastmod>2016-10-26T07:08:10.000Z</lastmod>
     
