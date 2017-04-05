@@ -1,0 +1,692 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="google-site-verification" content="A3sL883p90l8FNR6rdUF_AS9n9sDSYyaSRP-d2xHok4" />
+<meta name="baidu-site-verification" content="i9pb3atBIC" />
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔试／面试,DFS," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="DFS适用于求组合，输出全部答案的场景。本次包含leetcode题目 Subsets, Combinations, Combination Sum, Combination Sum II, Combination Sum III, Combination Sum IV。  注意，最后一个也是集合题目，但求的是集合数目，用动态规划的方法。
+（1）求一个数组的全部子集组合
+
+深搜方法：［］［1］［1，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DFS求集合的各种变形">
+<meta property="og:url" content="http://ritali.github.io/2017/04/05/review_dfs/index.html">
+<meta property="og:site_name" content="Ritali's blog">
+<meta property="og:description" content="DFS适用于求组合，输出全部答案的场景。本次包含leetcode题目 Subsets, Combinations, Combination Sum, Combination Sum II, Combination Sum III, Combination Sum IV。  注意，最后一个也是集合题目，但求的是集合数目，用动态规划的方法。
+（1）求一个数组的全部子集组合
+
+深搜方法：［］［1］［1，">
+<meta property="og:updated_time" content="2017-04-05T14:20:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DFS求集合的各种变形">
+<meta name="twitter:description" content="DFS适用于求组合，输出全部答案的场景。本次包含leetcode题目 Subsets, Combinations, Combination Sum, Combination Sum II, Combination Sum III, Combination Sum IV。  注意，最后一个也是集合题目，但求的是集合数目，用动态规划的方法。
+（1）求一个数组的全部子集组合
+
+深搜方法：［］［1］［1，">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://ritali.github.io/2017/04/05/review_dfs/"/>
+
+
+  <title> DFS求集合的各种变形 | Ritali's blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Ritali's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">live better and better</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                DFS求集合的各种变形
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-04-05T21:54:20+08:00" content="2017-04-05">
+              2017-04-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/笔试题/" itemprop="url" rel="index">
+                    <span itemprop="name">笔试题</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          <span>&nbsp; | &nbsp; 
+          visited: &nbsp; <span id="busuanzi_value_page_pv" ></span>
+          </span>    
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>DFS适用于求组合，输出全部答案的场景。<br>本次包含leetcode题目 Subsets, Combinations, Combination Sum, Combination Sum II, Combination Sum III, Combination Sum IV。  注意，最后一个也是集合题目，但求的是集合数目，用动态规划的方法。</p>
+<p>（1）求一个数组的全部子集组合</p>
+<ul>
+<li>深搜方法：<br>［］<br>［1］［1，2］［1，2，3］［1，3］<br>［2］［2，3］<br>［3］</li>
+<li>递归元素添加：<br>［］<br>［1］<br>［2］［1，2］<br>［3］［1，3］［2，3］［1，2，3］</li>
+</ul>
+<p>（2）求一个数组符合条件（比如元素个数为2个）的特定子集组合<br>（3）求从一个数组中选出几个数，和为特定值的组合，元素允许重复使用（是否默认输入数组无重复元素），结果集不允许存在重复组合.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">if(target == 0)&#123;</div><div class="line">     allSets.push_back(sol);</div><div class="line">     return;</div><div class="line">&#125;</div><div class="line">for(int j=i; j&lt;candidates.size();j++)&#123;</div><div class="line">    if(candidates[j] &gt; target)&#123;</div><div class="line">        continue;</div><div class="line">    &#125;</div><div class="line">    sol.push_back(candidates[j]);</div><div class="line">    findAllSets(candidates, j, target-candidates[j], sol, allSets //注意允许同一个元素重复使用</div><div class="line">    sol.pop_back();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>（4）求从一个数组中选出几个数，和为特定值的组合，元素不允许重复使用（是否默认输入数组可能存在重复元素），结果集不允许存在重复组合.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">if(target == 0)&#123;</div><div class="line">    allSets.push_back(sol);</div><div class="line">    return;</div><div class="line">&#125;</div><div class="line">for(int j=i; j&lt;candidates.size();j++)&#123;</div><div class="line">    if(candidates[j] &gt; target )&#123; //或者在for循环外面加一层if(target &lt; 0) continue;</div><div class="line">        continue;</div><div class="line">    &#125;</div><div class="line">    if(j!=i &amp;&amp; candidates[j] == candidates[j-1]) //避免重复结果组合的出现</div><div class="line">        continue;</div><div class="line">    sol.push_back(candidates[j]);</div><div class="line">    findAllSets(candidates, j+1, target-candidates[j], sol, allSets); //注意同一个元素不允许重复使用</div><div class="line">    sol.pop_back();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>(5) 求从1-9中选出k个数，和n的组合，（4）的变形。</p>
+<h3 id="详细的题目讲解"><a href="#详细的题目讲解" class="headerlink" title="详细的题目讲解"></a>详细的题目讲解</h3><h4 id="1-求所有子集"><a href="#1-求所有子集" class="headerlink" title="(1) 求所有子集"></a>(1) 求所有子集</h4><p>/<em>元素添加的方式最容易理解<br>[]<br>[],[1]<br>[],[1],[2],[1,2]<br>[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]
+</em>/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; subsets(vector&lt;int&gt;&amp; nums) &#123;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; res;</div><div class="line">        vector&lt;int&gt; part;</div><div class="line">        res.push_back(part);</div><div class="line">        if(nums.size() == 0)&#123;</div><div class="line">            return res;</div><div class="line">        &#125;</div><div class="line">        vector&lt;int&gt;::iterator it;</div><div class="line"> </div><div class="line">        for(it=nums.begin(); it != nums.end(); it++)&#123;</div><div class="line">            int n = res.size();</div><div class="line">            for (int j =0; j&lt; n; j++)&#123;</div><div class="line">                part = res[j];</div><div class="line">                part.push_back(*it);</div><div class="line">                res.push_back(part);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return res;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>DFS 递归方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; combine(int n, int k) &#123;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; allSets;</div><div class="line">        vector&lt;int&gt; sol;</div><div class="line">        findAllSets(n, 1, k, sol, allSets);</div><div class="line">        return allSets;</div><div class="line">    &#125;</div><div class="line">    void findAllSets(int n, int i, int k, vector&lt;int&gt;&amp; sol, vector&lt;vector&lt;int&gt;&gt;&amp; allSets)&#123;</div><div class="line">        for(int j = i; j&lt;=n;j++)&#123;</div><div class="line">            sol.push_back(j);</div><div class="line">            allSets.push_back(sol);</div><div class="line">            findAllSets(n, j+1, k, sol, allSets);</div><div class="line">            sol.pop_back();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h4 id="2）求一个数组符合条件（比如元素个数为2个）的特定子集组合"><a href="#2）求一个数组符合条件（比如元素个数为2个）的特定子集组合" class="headerlink" title="(2）求一个数组符合条件（比如元素个数为2个）的特定子集组合"></a>(2）求一个数组符合条件（比如元素个数为2个）的特定子集组合</h4><p>注意：阿里2017二面题，已哭。<br>/*<br>Given two integers n and k, return all possible combinations of k numbers out of 1 … n.</p>
+<p>For example,<br>If n = 4 and k = 2, a solution is:</p>
+<p>[<br>  [2,4],<br>  [3,4],<br>  [2,3],<br>  [1,2],<br>  [1,3],<br>  [1,4],<br>]<br>*/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; combine(int n, int k) &#123;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; allSets;</div><div class="line">        vector&lt;int&gt; sol;</div><div class="line">        findAllSets(n, 1, k, sol, allSets);</div><div class="line">        return allSets;</div><div class="line">    &#125;</div><div class="line">    void findAllSets(int n, int i, int k, vector&lt;int&gt;&amp; sol, vector&lt;vector&lt;int&gt;&gt;&amp; allSets)&#123;</div><div class="line">        for(int j = i; j&lt;=n;j++)&#123;</div><div class="line">            if(sol.size() &lt; k)&#123;</div><div class="line">                sol.push_back(j);</div><div class="line">                if(sol.size() == k)&#123;</div><div class="line">                    allSets.push_back(sol);</div><div class="line">                &#125;</div><div class="line">                findAllSets(n, j+1, k, sol, allSets);</div><div class="line">                sol.pop_back();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h4 id="3）求从一个数组中选出几个数，和为特定值的组合，元素允许重复使用（是否默认输入数组无重复元素），结果集不允许存在重复组合"><a href="#3）求从一个数组中选出几个数，和为特定值的组合，元素允许重复使用（是否默认输入数组无重复元素），结果集不允许存在重复组合" class="headerlink" title="(3）求从一个数组中选出几个数，和为特定值的组合，元素允许重复使用（是否默认输入数组无重复元素），结果集不允许存在重复组合."></a>(3）求从一个数组中选出几个数，和为特定值的组合，元素允许重复使用（是否默认输入数组无重复元素），结果集不允许存在重复组合.</h4><p>/*<br>Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T.</p>
+<p>The same repeated number may be chosen from C unlimited number of times.</p>
+<p>Note:<br>All numbers (including target) will be positive integers.<br>The solution set must not contain duplicate combinations. //并结果集合不允许重复<br>For example, given candidate set [2, 3, 6, 7] and target 7,<br>A solution set is:<br>[<br>  [7],<br>  [2, 2, 3]<br>]<br>此题的问题是：输入是不是默认没有重复元素，如果有的话结果也是需要去重的。答案没处理去重，所有的测试用例也过了。。。<br>*/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; combinationSum(vector&lt;int&gt;&amp; candidates, int target) &#123;</div><div class="line">        vector&lt;int&gt; sol;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; allSets;</div><div class="line">        findAllSets(candidates, 0, target, sol, allSets);</div><div class="line">        return allSets;</div><div class="line">    &#125; </div><div class="line">    void findAllSets(vector&lt;int&gt;&amp; candidates, int i, int target, vector&lt;int&gt;&amp; sol, vector&lt;vector&lt;int&gt;&gt;&amp; allSets)&#123;</div><div class="line">        if(target == 0)&#123;</div><div class="line">             allSets.push_back(sol);</div><div class="line">             return;</div><div class="line">        &#125;</div><div class="line">        for(int j=i; j&lt;candidates.size();j++)&#123;</div><div class="line">            if(candidates[j] &gt; target)&#123;</div><div class="line">                continue;</div><div class="line">            &#125;</div><div class="line">            sol.push_back(candidates[j]);</div><div class="line">            findAllSets(candidates, j, target-candidates[j], sol, allSets //注意允许同一个元素重复使用</div><div class="line">            sol.pop_back();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>####（4）求从一个数组中选出几个数，和为特定值的组合，元素不允许重复使用（是否默认输入数组可能存在重复元素），结果集不允许存在重复组合.</p>
+<p>同上一题，但是不允许同一个元素重复使用（需要先排序），并结果集合不允许重复</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; combinationSum2(vector&lt;int&gt;&amp; candidates, int target) &#123;</div><div class="line">        vector&lt;int&gt; sol;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; allSets;</div><div class="line">        sort(candidates.begin(), candidates.end()); //不允许重复，先排序</div><div class="line">        findAllSets(candidates, 0, target, sol, allSets);</div><div class="line">        return allSets;</div><div class="line">    &#125; </div><div class="line">    void findAllSets(vector&lt;int&gt;&amp; candidates, int i, int target, vector&lt;int&gt;&amp; sol, vector&lt;vector&lt;int&gt;&gt;&amp; allSets)&#123;</div><div class="line">        map&lt;vector&lt;int&gt;, int&gt; myMap;</div><div class="line">        if(target == 0)&#123;</div><div class="line">             int k = 0;</div><div class="line">             for(k = 0; k&lt; allSets.size(); k++)&#123; //查找是否已存在</div><div class="line">                 if (sol == allSets[k])&#123;</div><div class="line">                     break;</div><div class="line">                 &#125;</div><div class="line">             &#125;</div><div class="line">             if(k == allSets.size()) &#123;//不存在,加入</div><div class="line">                myMap[sol] = 1;</div><div class="line">                allSets.push_back(sol);</div><div class="line">             &#125;</div><div class="line">             return;</div><div class="line">        &#125;</div><div class="line">        for(int j=i; j&lt;candidates.size();j++)&#123;</div><div class="line">            if(candidates[j] &gt; target)&#123;</div><div class="line">                continue;</div><div class="line">            &#125;</div><div class="line">            sol.push_back(candidates[j]);</div><div class="line">            findAllSets(candidates, j+1, target-candidates[j], sol, allSets); //注意不允许同一个元素重复使用（j和j+1的区别）</div><div class="line">            sol.pop_back();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>// 另外一种控制重复的通用方法，下面的题会反复用到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; combinationSum2(vector&lt;int&gt;&amp; candidates, int target) &#123;</div><div class="line">        vector&lt;int&gt; sol;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; allSets;</div><div class="line">        sort(candidates.begin(), candidates.end()); //先排序</div><div class="line">        findAllSets(candidates, 0, target, sol, allSets);</div><div class="line">        return allSets;</div><div class="line">    &#125; </div><div class="line">    void findAllSets(vector&lt;int&gt;&amp; candidates, int i, int target, vector&lt;int&gt;&amp; sol, vector&lt;vector&lt;int&gt;&gt;&amp; allSets)&#123;</div><div class="line">        if(target == 0)&#123;</div><div class="line">            allSets.push_back(sol);</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        for(int j=i; j&lt;candidates.size();j++)&#123;</div><div class="line">            if(candidates[j] &gt; target)&#123;</div><div class="line">                continue;</div><div class="line">            &#125;</div><div class="line">            if(j!=i &amp;&amp; candidates[j] == candidates[j-1]) //避免重复结果</div><div class="line">                continue;</div><div class="line">            sol.push_back(candidates[j]);</div><div class="line">            findAllSets(candidates, j+1, target-candidates[j], sol, allSets); //注意同一个元素不允许重复使用</div><div class="line">            sol.pop_back();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h4 id="5-求从1-9中选出k个数，和n的组合，（4）的变形。"><a href="#5-求从1-9中选出k个数，和n的组合，（4）的变形。" class="headerlink" title="(5) 求从1-9中选出k个数，和n的组合，（4）的变形。"></a>(5) 求从1-9中选出k个数，和n的组合，（4）的变形。</h4><p>/*<br>Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.<br>Example 1:</p>
+<p>Input: k = 3, n = 7</p>
+<p>Output:</p>
+<p>[[1,2,4]]</p>
+<p>Example 2:</p>
+<p>Input: k = 3, n = 9</p>
+<p>Output:</p>
+<p>[[1,2,6], [1,3,5], [2,3,4]]<br>*/<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    vector&lt;vector&lt;int&gt;&gt; combinationSum3(int k, int n) &#123;</div><div class="line">        vector&lt;int&gt; sol;</div><div class="line">        vector&lt;vector&lt;int&gt;&gt; allSets;</div><div class="line">        findAllSets(k, n, 1, sol, allSets);</div><div class="line">        return allSets;</div><div class="line">    &#125; </div><div class="line">    void findAllSets(int k, int n, int i, vector&lt;int&gt;&amp; sol, vector&lt;vector&lt;int&gt;&gt;&amp; allSets)&#123;</div><div class="line">        if(n == 0)&#123;</div><div class="line">            if(sol.size() == k)</div><div class="line">                allSets.push_back(sol);</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        if (sol.size() &gt; k || i&gt;9 )</div><div class="line">            return;</div><div class="line">        for(int j=i; j&lt;=9;j++)&#123;</div><div class="line">            if(j &gt; n)&#123;</div><div class="line">                continue;</div><div class="line">            &#125;</div><div class="line">            sol.push_back(j);</div><div class="line">            findAllSets(k, n-j, j+1, sol, allSets); </div><div class="line">            sol.pop_back();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h4 id="6-所有可能的组合数目，和为某个值，元素可重复使用"><a href="#6-所有可能的组合数目，和为某个值，元素可重复使用" class="headerlink" title="(6) 所有可能的组合数目，和为某个值，元素可重复使用"></a>(6) 所有可能的组合数目，和为某个值，元素可重复使用</h4><p>/*<br>Given an integer array with all positive numbers and no duplicates, find the number of possible combinations that add up to a positive integer target.</p>
+<p>Example:</p>
+<p>nums = [1, 2, 3]<br>target = 4</p>
+<p>The possible combination ways are:<br>(1, 1, 1, 1)<br>(1, 1, 2)<br>(1, 2, 1)<br>(1, 3)<br>(2, 1, 1)<br>(2, 2)<br>(3, 1)</p>
+<p>Note that different sequences are counted as different combinations.</p>
+<p>Therefore the output is 7.<br>Follow up:<br>What if negative numbers are allowed in the given array?<br>How does it change the problem?<br>What limitation we need to add to the question to allow negative numbers?<br>*/</p>
+<h5 id="遇到求集合总数的题目，条件反射动态规划"><a href="#遇到求集合总数的题目，条件反射动态规划" class="headerlink" title="遇到求集合总数的题目，条件反射动态规划"></a>遇到求集合总数的题目，条件反射动态规划</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int combinationSum4(vector&lt;int&gt;&amp; nums, int target) &#123;</div><div class="line">        vector&lt;int&gt; res(target+1);</div><div class="line">        res[0] = 1;</div><div class="line">        if(nums.size() == 0)&#123;</div><div class="line">            return 0;</div><div class="line">        &#125;</div><div class="line">        sort(nums.begin(), nums.end());</div><div class="line">        for(int i = 1; i&lt;=target; i++)&#123;</div><div class="line">            for(int j=0;j&lt;nums.size();j++)&#123;</div><div class="line">                if(i &gt;= nums[j])</div><div class="line">                    res[i] = res[i] + res[i-nums[j]];</div><div class="line">                else</div><div class="line">                     break;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return res[target];</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h4 id="7-加一道类似的微软二面面试题"><a href="#7-加一道类似的微软二面面试题" class="headerlink" title="(7). 加一道类似的微软二面面试题"></a>(7). 加一道类似的微软二面面试题</h4><p>一个含有n个集合的集合(集合的元素多个集合),对这个集合中的元素合并，合并策略：如果两个元素(集合)存在交集，则合并为一个集合，最后的新元素个数为m个。<br>问题1. m是不是一定存在稳定状态，所谓的不稳定状态是指，一直存在交集，需要一直合并<br>问题2. m是唯一的吗？<br>问题3. 代码实现</p>
+<p>前两个问题利用假设不存在的方法证明<br>问题3的代码实现类似于最简单的combinations，留作思考。</p>
+<h4 id="总结：求组合，输出全部答案，想到dfs；求总数，条件反射dp。万变不离其宗，记住一种解法，比如列表的所有集合，剩下的是举一反三的推演。"><a href="#总结：求组合，输出全部答案，想到dfs；求总数，条件反射dp。万变不离其宗，记住一种解法，比如列表的所有集合，剩下的是举一反三的推演。" class="headerlink" title="总结：求组合，输出全部答案，想到dfs；求总数，条件反射dp。万变不离其宗，记住一种解法，比如列表的所有集合，剩下的是举一反三的推演。"></a>总结：求组合，输出全部答案，想到dfs；求总数，条件反射dp。万变不离其宗，记住一种解法，比如列表的所有集合，剩下的是举一反三的推演。</h4>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔试／面试/" rel="tag">#笔试／面试</a>
+          
+            <a href="/tags/DFS/" rel="tag">#DFS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/02/2017-tencent-onlie-test/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/ritali.jpg"
+               alt="Ritali" />
+          <p class="site-author-name" itemprop="name">Ritali</p>
+          <p class="site-description motion-element" itemprop="description">live better and better</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Ritali" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/liverita" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/XilianLi" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ritali</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+&nbsp&nbsp|&nbsp&nbsp Total visited- <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp
+|&nbsp&nbsp User visited-<span id="busuanzi_value_site_uv"></span>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

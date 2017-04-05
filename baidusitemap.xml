@@ -4,6 +4,83 @@
 
     
   <url>
+    <loc>http://ritali.github.io/2017/04/05/review_dfs/</loc>
+    <lastmod>2017-04-05T14:20:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>DFS求集合的各种变形</title>
+        <pubTime>2017-04-05T13:54:20.000Z</pubTime>
+        
+        <tag>笔试／面试</tag>
+         
+        <tag>DFS</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔试题" url="http://ritali.github.io/categories/%E7%AC%94%E8%AF%95%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ritali.github.io/2017/04/02/2017-tencent-onlie-test/</loc>
+    <lastmod>2017-04-02T09:27:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>Tencent 2016 研发工程师笔试题 + 答案解析</title>
+        <pubTime>2017-04-02T03:15:20.000Z</pubTime>
+        
+        <tag>笔试／面试</tag>
+         
+         
+           
+             
+              <breadCrumb title="笔试题" url="http://ritali.github.io/categories/%E7%AC%94%E8%AF%95%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ritali.github.io/2017/04/02/2017-tencent-onlie-test/</loc>
+    <lastmod>2017-04-02T06:44:47.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2017-04-02T06:44:47.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ritali.github.io/2016/10/19/hexo-blog-start/</loc>
+    <lastmod>2017-03-16T08:56:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用hexo搭建git博客</title>
+        <pubTime>2016-10-19T02:46:20.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://ritali.github.io/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ritali.github.io/2017/03/16/book-java-collection/</loc>
     <lastmod>2017-03-16T08:51:00.000Z</lastmod>
     <data>
@@ -83,26 +160,6 @@
            
              
               <breadCrumb title="deepLearning" url="http://ritali.github.io/categories/deepLearning/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ritali.github.io/2016/10/19/hexo-blog-start/</loc>
-    <lastmod>2016-10-26T07:08:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用hexo搭建git博客</title>
-        <pubTime>2016-10-19T02:46:20.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://ritali.github.io/categories/tools/"/>
           
         </display>
     </data>

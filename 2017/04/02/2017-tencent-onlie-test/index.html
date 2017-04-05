@@ -1,0 +1,725 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="google-site-verification" content="A3sL883p90l8FNR6rdUF_AS9n9sDSYyaSRP-d2xHok4" />
+<meta name="baidu-site-verification" content="i9pb3atBIC" />
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="笔试／面试," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="1. 我们常说的mvc框架是指的什么的? D1234A. 模块(module)-视图(view)-组件(component)B. 模型(model)-视图(view)-组件(component)C. 模块(module)-视图(view)-控制器(controller)D. 模型(model)-视图(view)-控制器(controller)
+2. 对某二叉树进行先序遍历的结果是ABDEFC，中序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tencent 2016 研发工程师笔试题 + 答案解析">
+<meta property="og:url" content="http://ritali.github.io/2017/04/02/2017-tencent-onlie-test/index.html">
+<meta property="og:site_name" content="Ritali's blog">
+<meta property="og:description" content="1. 我们常说的mvc框架是指的什么的? D1234A. 模块(module)-视图(view)-组件(component)B. 模型(model)-视图(view)-组件(component)C. 模块(module)-视图(view)-控制器(controller)D. 模型(model)-视图(view)-控制器(controller)
+2. 对某二叉树进行先序遍历的结果是ABDEFC，中序">
+<meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20140908/59-23.png">
+<meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20150910/685628_1441865424324_5B53EEEC653FE41A79FB1D63693D69F3">
+<meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20140908/59-a1.png">
+<meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20140908/59-a2.png">
+<meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20140908/59-a3.png">
+<meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20140908/59-a4.png">
+<meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20150909/266279_1441764078523_5727B1BE594E6204088C3DDC603B8B68">
+<meta property="og:image" content="http://hi.csdn.net/attachment/201108/7/0_131271823564Rx.gif">
+<meta property="og:image" content="http://uploadfiles.nowcoder.com/images/20140908/59-4.png">
+<meta property="og:updated_time" content="2017-04-02T09:27:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tencent 2016 研发工程师笔试题 + 答案解析">
+<meta name="twitter:description" content="1. 我们常说的mvc框架是指的什么的? D1234A. 模块(module)-视图(view)-组件(component)B. 模型(model)-视图(view)-组件(component)C. 模块(module)-视图(view)-控制器(controller)D. 模型(model)-视图(view)-控制器(controller)
+2. 对某二叉树进行先序遍历的结果是ABDEFC，中序">
+<meta name="twitter:image" content="http://uploadfiles.nowcoder.com/images/20140908/59-23.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://ritali.github.io/2017/04/02/2017-tencent-onlie-test/"/>
+
+
+  <title> Tencent 2016 研发工程师笔试题 + 答案解析 | Ritali's blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Ritali's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">live better and better</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Tencent 2016 研发工程师笔试题 + 答案解析
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-04-02T11:15:20+08:00" content="2017-04-02">
+              2017-04-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/笔试题/" itemprop="url" rel="index">
+                    <span itemprop="name">笔试题</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          <span>&nbsp; | &nbsp; 
+          visited: &nbsp; <span id="busuanzi_value_page_pv" ></span>
+          </span>    
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="1-我们常说的mvc框架是指的什么的-D"><a href="#1-我们常说的mvc框架是指的什么的-D" class="headerlink" title="1. 我们常说的mvc框架是指的什么的? D"></a>1. 我们常说的mvc框架是指的什么的? D</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">A. 模块(module)-视图(view)-组件(component)</div><div class="line">B. 模型(model)-视图(view)-组件(component)</div><div class="line">C. 模块(module)-视图(view)-控制器(controller)</div><div class="line">D. 模型(model)-视图(view)-控制器(controller)</div></pre></td></tr></table></figure>
+<h4 id="2-对某二叉树进行先序遍历的结果是ABDEFC，中序遍历的结果是DBFEAC，则后序遍历的结果是（）"><a href="#2-对某二叉树进行先序遍历的结果是ABDEFC，中序遍历的结果是DBFEAC，则后序遍历的结果是（）" class="headerlink" title="2. 对某二叉树进行先序遍历的结果是ABDEFC，中序遍历的结果是DBFEAC，则后序遍历的结果是（）"></a>2. 对某二叉树进行先序遍历的结果是ABDEFC，中序遍历的结果是DBFEAC，则后序遍历的结果是（）</h4><p> 简单，考察点二叉树的遍历，直接出答案：DFEBCA</p>
+<h4 id="3-有一个如下的结构体："><a href="#3-有一个如下的结构体：" class="headerlink" title="3. 有一个如下的结构体："></a>3. 有一个如下的结构体：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">struct A&#123;</div><div class="line"> long a1;</div><div class="line"> short a2;</div><div class="line"> int a3;</div><div class="line"> int *a4;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h4 id="请问在64位编译器下用sizeof-struct-A-计算出的大小是多少？A"><a href="#请问在64位编译器下用sizeof-struct-A-计算出的大小是多少？A" class="headerlink" title="请问在64位编译器下用sizeof(struct A)计算出的大小是多少？A"></a>请问在64位编译器下用sizeof(struct A)计算出的大小是多少？A</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">A. 24</div><div class="line">B. 28</div><div class="line">C. 16</div><div class="line">D. 18</div></pre></td></tr></table></figure>
+<p>解析：<br>第一个，8字节<br>第二个，2字节，加起来是10，是2的倍数，不用对齐<br>第三个，4字节，加起来是14，不是4的倍数，对齐到16<br>第四个，8字节，加起来是24，是8的倍数，不用对齐<br>所以一共是24字节<br>多看看就背住了：<br>32位编译器：32位系统下指针占用4字节<br>      char ：1个字节<br>      char<em>（即指针变量）: 4个字节（32位的寻址空间是2^32, 即32个bit，也就是4个字节。同理64位编译器）<br>      short int : 2个字节<br>      int：  4个字节<br>      unsigned int : 4个字节<br>      float:  4个字节<br>      double:   8个字节<br>      long:   4个字节<br>      long long:  8个字节<br>      unsigned long:  4个字节<br>64位编译器：64位系统下指针占用8字节<br>      char ：1个字节<br>      char</em>(即指针变量): 8个字节<br>      short int : 2个字节<br>      int：  4个字节<br>      unsigned int : 4个字节<br>      float:  4个字节<br>      double:   8个字节<br>      long:   8个字节<br>      long long:  8个字节<br>      unsigned long:  8个字节</p>
+<h4 id="4-以下不属于tcp连接断开的状态是？C"><a href="#4-以下不属于tcp连接断开的状态是？C" class="headerlink" title="4. 以下不属于tcp连接断开的状态是？C"></a>4. 以下不属于tcp连接断开的状态是？C</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">TIME_WAIT</div><div class="line">FIN_WAIT_1</div><div class="line">SYNC_SENT</div><div class="line">FIN_WAIT_2</div></pre></td></tr></table></figure>
+<p>SYNC_SENT是连接建立时的状态。</p>
+<h4 id="5-下面关于ICMP协议的描述中，正确的是（C）"><a href="#5-下面关于ICMP协议的描述中，正确的是（C）" class="headerlink" title="5. 下面关于ICMP协议的描述中，正确的是（C）"></a>5. 下面关于ICMP协议的描述中，正确的是（C）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ICMP协议根据MAC地址查找对应的IP地址  RARP</div><div class="line">ICMP协议把公网的IP地址转换为私网的IP地址  NAT</div><div class="line">ICMP协议用于控制数据报传送中的差错情况  </div><div class="line">ICMP协议集中管理网络中的IP地址分配  DHCP</div></pre></td></tr></table></figure>
+<p>解析：<br>ICMP是（Internet Control Message Protocol）Internet控制报文协议。它是TCP/IP协议族 的一个子协议，用于在IP主机 、 路由器之间传递控制消息。控制消息是指网络通不通、 主机 是否可达、路由是否可用等网络本身的消息<br>在IPv4协议中最常用的ICMP消息类型有以下几种:<br>•回显应答(类型0)和回显请求(类型8):这是Ping程序发送的信息。<br>•目标不可达(类型3)<br>•源抑制(类型4):这是一种用于通知发送者路由器或者主机出现阻塞现象的ICMP消息，发送者需要降低发送速度。<br>•重定向(类型5):这个消息用来向可以访问两台路由器的主机说“请使用另一台路由器”。<br>•路由器信息应答(类型9)和路由器信息请求(类型10)<br>•超时(类型11):这个消息有两种用途。第一，当超过IP生存期时向发送系统发出错误信息。第二，如果分段的IP数据报没有在某种时限内重新组合，这个消息将通知发送系统。</p>
+<h4 id="6-有如下一个类似跳表的数据结构：每层都是已经排好序的链表，level1层的链表有所有元素，levelN层的链表只有levelN-1的1半的元素，levelN层的结点指向levelN-1层中相同的结点。请问查找一个元素的时间复杂度是：二分查找O-logn"><a href="#6-有如下一个类似跳表的数据结构：每层都是已经排好序的链表，level1层的链表有所有元素，levelN层的链表只有levelN-1的1半的元素，levelN层的结点指向levelN-1层中相同的结点。请问查找一个元素的时间复杂度是：二分查找O-logn" class="headerlink" title="6. 有如下一个类似跳表的数据结构：每层都是已经排好序的链表，level1层的链表有所有元素，levelN层的链表只有levelN-1的1半的元素，levelN层的结点指向levelN-1层中相同的结点。请问查找一个元素的时间复杂度是：二分查找O(logn)"></a>6. 有如下一个类似跳表的数据结构：每层都是已经排好序的链表，level1层的链表有所有元素，levelN层的链表只有levelN-1的1半的元素，levelN层的结点指向levelN-1层中相同的结点。请问查找一个元素的时间复杂度是：二分查找O(logn)</h4><p><img src="http://uploadfiles.nowcoder.com/images/20140908/59-23.png" alt="image"></p>
+<h4 id="7-在一个单CPU的处理机中，有P1，P3，P5三个作业，有两个IO设备IO1，IO2，并且能够实现抢先式多任务并行工作的多道程序环境中，投入运行优先级由高到低P5，P1，P3三个作业，他们使用设备的先后顺序和占用设备的时间分别为：P1-IO2-10ms-CPU-10ms-IO1-30ms）CPU-10ms-P3-IO1-30ms-CPU-10ms-IO2-30ms）CPU-10ms-P5-CPU-20ms-IO1-30ms-CPU-10ms-IO2-15ms）忽略其他的时间损耗，3个作业投入到全部完成的情况下。请问下列哪些选项为IO2的设备利用率？E"><a href="#7-在一个单CPU的处理机中，有P1，P3，P5三个作业，有两个IO设备IO1，IO2，并且能够实现抢先式多任务并行工作的多道程序环境中，投入运行优先级由高到低P5，P1，P3三个作业，他们使用设备的先后顺序和占用设备的时间分别为：P1-IO2-10ms-CPU-10ms-IO1-30ms）CPU-10ms-P3-IO1-30ms-CPU-10ms-IO2-30ms）CPU-10ms-P5-CPU-20ms-IO1-30ms-CPU-10ms-IO2-15ms）忽略其他的时间损耗，3个作业投入到全部完成的情况下。请问下列哪些选项为IO2的设备利用率？E" class="headerlink" title="7. 在一个单CPU的处理机中，有P1，P3，P5三个作业，有两个IO设备IO1，IO2，并且能够实现抢先式多任务并行工作的多道程序环境中，投入运行优先级由高到低P5，P1，P3三个作业，他们使用设备的先后顺序和占用设备的时间分别为：P1:IO2(10ms) CPU(10ms) IO1(30ms）CPU(10ms)P3:IO1(30ms) CPU(10ms) IO2(30ms）CPU(10ms)P5:CPU(20ms) IO1(30ms) CPU(10ms) IO2(15ms）忽略其他的时间损耗，3个作业投入到全部完成的情况下。请问下列哪些选项为IO2的设备利用率？E"></a>7. 在一个单CPU的处理机中，有P1，P3，P5三个作业，有两个IO设备IO1，IO2，并且能够实现抢先式多任务并行工作的多道程序环境中，投入运行优先级由高到低P5，P1，P3三个作业，他们使用设备的先后顺序和占用设备的时间分别为：P1:IO2(10ms) CPU(10ms) IO1(30ms）CPU(10ms)P3:IO1(30ms) CPU(10ms) IO2(30ms）CPU(10ms)P5:CPU(20ms) IO1(30ms) CPU(10ms) IO2(15ms）忽略其他的时间损耗，3个作业投入到全部完成的情况下。请问下列哪些选项为IO2的设备利用率？E</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">0.55</div><div class="line">0.26</div><div class="line">0.48</div><div class="line">0.5</div><div class="line">0.39</div></pre></td></tr></table></figure>
+<p>因为是抢占式的，所以优先级最高的P5会优先执行，不用等待任何资源。<br>然后考虑P1，同一时刻CPU或者IO资源只能一个进程访问。<br><img src="http://uploadfiles.nowcoder.com/images/20150910/685628_1441865424324_5B53EEEC653FE41A79FB1D63693D69F3" alt="image"></p>
+<h4 id="8-C语言里i-5-j-7-请问i-j等于多少？＝7"><a href="#8-C语言里i-5-j-7-请问i-j等于多少？＝7" class="headerlink" title="8. C语言里i=5,j=7,请问i|j等于多少？＝7"></a>8. C语言里i=5,j=7,请问i|j等于多少？＝7</h4><p>考察点：位操作<br>^异或（相同为0，不同为1）， ~取反<br>a^(~a) 得到一串1<br>x &amp; (~0 &lt;&lt; n) 将x的后n位清零<br>A异或0等于A呢,A异或1等于A非 A异或A = 0（都相同，各位都为0）</p>
+<p>x &amp; 0 = 0（与表示：都同时取值为1时,其逻辑乘积才等于1）<br>x &amp; 1 = x<br>x &amp; x = x</p>
+<p>x | 0 = x （或表示，只要有一个为1，则结果为1） x | 1 = 1<br>x | x = x</p>
+<h4 id="9-请选择下面代码的输出结果-80"><a href="#9-请选择下面代码的输出结果-80" class="headerlink" title="9. 请选择下面代码的输出结果 80"></a>9. 请选择下面代码的输出结果 80</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">int main(int argc,char*argv[])</div><div class="line">&#123;</div><div class="line">    int a=10;</div><div class="line">    int b=4;</div><div class="line">    int c=a/b;</div><div class="line">    int d=c*a*b++;</div><div class="line">    std:cout&lt;&lt;d&lt;&lt;std::endl;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>考察点：操作符优先级，整数除</p>
+<h4 id="10-请问下列代码的输出结果有可能是哪些（AC）？"><a href="#10-请问下列代码的输出结果有可能是哪些（AC）？" class="headerlink" title="10. 请问下列代码的输出结果有可能是哪些（AC）？"></a>10. 请问下列代码的输出结果有可能是哪些（AC）？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">#include&lt;stdint.h&gt;</div><div class="line">#include&lt;stdio.h&gt;</div><div class="line">union X</div><div class="line">&#123;</div><div class="line">    int32_t a;</div><div class="line">    struct </div><div class="line">    &#123;</div><div class="line">        int16_t b;</div><div class="line">        int16_t c;</div><div class="line">    &#125;;</div><div class="line">&#125;;</div><div class="line">int main()&#123;</div><div class="line">    X x;</div><div class="line">    x.a=0x20150810;</div><div class="line">    printf(&quot;%x,%x\n&quot;,x.b,x.c);</div><div class="line">    return 0;</div><div class="line">&#125;</div><div class="line">2015,810</div><div class="line">50810,201</div><div class="line">810,2015</div><div class="line">20150,810</div></pre></td></tr></table></figure>
+<p>32bit宽的数0x12345678<br>在Little-endian模式CPU内存中的存放方式（假设从地址0x4000开始存放）为：<br>                                          内存地址     0x4000     0x4001     0x4002     0x4003<br>                                          存放内容     0x78        0x56        0x34         0x12<br>而在Big- endian模式CPU内存中的存放方式则为：<br>                                          内存地址     0x4000     0x4001     0x4002     0x4003<br>                                          存放内容     0x12         0x34        0x56         0x78</p>
+<h4 id="11-如下代码，result变量的输出结果是多少？-11"><a href="#11-如下代码，result变量的输出结果是多少？-11" class="headerlink" title="11. 如下代码，result变量的输出结果是多少？ 11"></a>11. 如下代码，result变量的输出结果是多少？ 11</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">using namespace std;</div><div class="line">int i=1;</div><div class="line">class MyCls&#123;</div><div class="line">public:</div><div class="line">    MyCls():m_nFor(m_nThd),m_nSec(i++),m_nFir(i++),m_nThd(i++)&#123;</div><div class="line">        m_nThd=i;</div><div class="line">    &#125;</div><div class="line">    void echo()&#123;</div><div class="line">        cout&lt;&lt;&quot;result:&quot;&lt;&lt;m_nFir+m_nSec+m_nThd+m_nFor&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">private:</div><div class="line">    int m_nFir;</div><div class="line">    int m_nSec;</div><div class="line">    int m_nThd;</div><div class="line">    int &amp;m_nFor;</div><div class="line">&#125;;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    MyCls oCls;</div><div class="line">    oCls.echo();</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>解析：<br>首先要明白变量初始化的顺序是其声明的顺序,跟初始化列表中的顺序无关。所以变量的初始化顺序为m_nFir(i++)，m_nSec(i++)，m_nThd(i++)，&amp;m_nFor(m_nThd);<br>i初始值为1，所以经过初始化列表初始化以后m_nFir=1，m_nSec=2，m_nThd=3，m_nFor为m_nThd的一个引用。</p>
+<p>并且此时i的值为4，构造函数中执行语句m_nThd=i后，m_nThd=4,m_nFor是它的一个引用，自然值也为4。<br>输出结果m_nFir+m_nSec+m_nThd+m_nFor=1+2+4+4=11   </p>
+<h4 id="12-在动态分区分配方案中，某一作业完成后，系统收回其主存空间，并与相邻空闲区合并，为此需要修改空闲区表，造成空闲区数减1的情况是-D"><a href="#12-在动态分区分配方案中，某一作业完成后，系统收回其主存空间，并与相邻空闲区合并，为此需要修改空闲区表，造成空闲区数减1的情况是-D" class="headerlink" title="12. 在动态分区分配方案中，某一作业完成后，系统收回其主存空间，并与相邻空闲区合并，为此需要修改空闲区表，造成空闲区数减1的情况是(D)"></a>12. 在动态分区分配方案中，某一作业完成后，系统收回其主存空间，并与相邻空闲区合并，为此需要修改空闲区表，造成空闲区数减1的情况是(D)</h4><p>无上邻空闲区，也无下邻空闲区<br>有上邻空闲区，但无下邻空闲区<br>有下邻空闲区，但无下邻空闲区<br>有上邻空闲区，也有下邻空闲区<br>解析：<br>假设原本的空闲区表空闲区数目为n，注意系统收回的主存空间（已空闲）并没有被加入到空闲区表 ，所以空闲区数目仍为n。现在要进行空闲区与回收主存空间合并，只有将原本的空闲区中的2块合成1块，才会有数目减1的效果。</p>
+<h4 id="13-对于移动平均算法，是计算某变量之前n个数值的算术平均，正确的说法是：A"><a href="#13-对于移动平均算法，是计算某变量之前n个数值的算术平均，正确的说法是：A" class="headerlink" title="13. 对于移动平均算法，是计算某变量之前n个数值的算术平均，正确的说法是：A"></a>13. 对于移动平均算法，是计算某变量之前n个数值的算术平均，正确的说法是：A</h4><p>空间复杂度是O(l)<br>空间复杂度是O(n)<br>空间复杂度是O(logn)<br>空间复杂度是O(nlogn)<br>解析：<br>任何一个算法不同情况下可能有多种解法，一般我们以时间复杂度为评判的话，就会用牺牲空间换时间。<br>这个算法最明显的有两种解法，<br>1.每次进来一个变量n，就遍历前面n个数，然后求和，再取平均，这样的话时间复杂度为O（n），空间为O(1)；<br>2.以空间换时间：从前往后没计算一次保留一次求和值到一个辅助空间，这样计算下一个的时候直接取得前一个和值加上当前数，再取平均得到当前平均，这样的话时间复杂度为O(1),空间为O(n).<br>附上一个解法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;  </div><div class="line">  </div><div class="line">public class RunningAverage &#123;  </div><div class="line">    public static void main(String[] args) &#123;  </div><div class="line">        Scanner sc = new Scanner(System.in);      </div><div class="line">      </div><div class="line">        int N = Integer.parseInt(args[0]);  </div><div class="line">          </div><div class="line">        double[] ave = new double[N];  </div><div class="line">        double sum = 0.0;  </div><div class="line">        for(int i = 1; sc.hasNext(); i++) &#123;  </div><div class="line">            sum -= ave[i % N];  </div><div class="line">            ave[i % N] = sc.nextDouble();  </div><div class="line">            sum += ave[i % N];  </div><div class="line">            if(i &gt;= N) System.out.print(sum/N + &quot; &quot;);  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="14-某一速率为100M的交换机有20个端口，其一个端口上连着一台笔记本电脑，此电脑从迅雷上下载一部1G的电影需要的时间可能是多久？-DE"><a href="#14-某一速率为100M的交换机有20个端口，其一个端口上连着一台笔记本电脑，此电脑从迅雷上下载一部1G的电影需要的时间可能是多久？-DE" class="headerlink" title="14. 某一速率为100M的交换机有20个端口，其一个端口上连着一台笔记本电脑，此电脑从迅雷上下载一部1G的电影需要的时间可能是多久？ DE"></a>14. 某一速率为100M的交换机有20个端口，其一个端口上连着一台笔记本电脑，此电脑从迅雷上下载一部1G的电影需要的时间可能是多久？ DE</h4><p>10S<br>20S<br>40S<br>100S<br>200S<br>交换机为独占带宽，<br>1G电影大小为:1GB=1024MB<br>带宽100M为100Mb=12.5MB</p>
+<h4 id="15-在linux编程中，以下哪个TCP的套接字选项与nagle算法的开启和关闭有关？B"><a href="#15-在linux编程中，以下哪个TCP的套接字选项与nagle算法的开启和关闭有关？B" class="headerlink" title="15. 在linux编程中，以下哪个TCP的套接字选项与nagle算法的开启和关闭有关？B"></a>15. 在linux编程中，以下哪个TCP的套接字选项与nagle算法的开启和关闭有关？B</h4><p>TCP_MAXSEG<br>TCP_NODELAY<br>TCP_SYNCNT<br>TCP_KEEPALIVE</p>
+<p>解析：<br>Nagle算法的规则：<br>（1）如果包长度达到MSS，则允许发送；<br>（2）如果该包含有FIN，则允许发送；<br>（3）设置了TCP_NODELAY选项，则允许发送；<br>（4）未设置TCP_CORK选项时，若所有发出去的小数据包（包长度小于MSS）均被确认，则允许发送；<br>（5）上述条件都未满足，但发生了超时（一般为200ms），则立即发送。</p>
+<h4 id="16-某二叉树的先根遍历序列和后根遍历序列正好相反，则该二叉树具有的特征是-A"><a href="#16-某二叉树的先根遍历序列和后根遍历序列正好相反，则该二叉树具有的特征是-A" class="headerlink" title="16. 某二叉树的先根遍历序列和后根遍历序列正好相反，则该二叉树具有的特征是(A)"></a>16. 某二叉树的先根遍历序列和后根遍历序列正好相反，则该二叉树具有的特征是(A)</h4><p>高度等于其结点数<br>任一结点无左孩子<br>任一结点无右孩子<br>空或只有一个结点</p>
+<p>考察点：树<br>只要是链，不一定非要无左孩子或无右孩子。即高度和结点数相等。</p>
+<h4 id="17-已知关系R（F-G-H-I-J）及其上的函数相关性集合，F-F-gt-G-J-gt-F-HJ-gt-I-该关系的候选关键字是：B"><a href="#17-已知关系R（F-G-H-I-J）及其上的函数相关性集合，F-F-gt-G-J-gt-F-HJ-gt-I-该关系的候选关键字是：B" class="headerlink" title="17. 已知关系R（F,G,H,I,J）及其上的函数相关性集合，F=(F-&gt;G,J-&gt;F,HJ-&gt;I),该关系的候选关键字是：B"></a>17. 已知关系R（F,G,H,I,J）及其上的函数相关性集合，F=(F-&gt;G,J-&gt;F,HJ-&gt;I),该关系的候选关键字是：B</h4><p>FJ<br>HJ<br>HI<br>IJ<br>考察点：数据库<br>如果一个超关键字去掉其中任何一个字段后不再能唯一地确定记录，则称它为“候选关键字”（Candidate Key）。候选关键字既能唯一地确定记录，它包含的字段又是最精炼的。也就是说候选关键字是最简单的超关键字。</p>
+<h4 id="18-win32系统里，下面几个sizeof的运行结果是（D）"><a href="#18-win32系统里，下面几个sizeof的运行结果是（D）" class="headerlink" title="18. win32系统里，下面几个sizeof的运行结果是（D）"></a>18. win32系统里，下面几个sizeof的运行结果是（D）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">int intValue=1024;</div><div class="line">char str[]=&quot;Tencent&quot;;</div><div class="line">const char* ch=str;</div><div class="line">sizeof(intValue)=__a___;</div><div class="line">sizeof(str)=__b____;</div><div class="line">sizeof(ch)=____c___;</div></pre></td></tr></table></figure>
+<p>a=1,b=1,c=1<br>a=4,b=4,c=4<br>a=4,b=7,c=4<br>a=4,b=8,c=4<br>解析：<br>首先int肯定是4不用说了，a＝4<br>第二个str［］代表char型数据，整个数组存‘Tencent\0’，所以长度为8，b＝8<br>第三个，32位机跟64位机的变量的差别主要在指针大小上，32位机指针长度为4，64位机指针长度为8，c＝4</p>
+<h4 id="19-若系统中有五台打印机，有多个进程均需要使用两台，规定每个进程一次仅允许申请一台，则在不发生死锁的情况下至多允许B个进程参与竞争"><a href="#19-若系统中有五台打印机，有多个进程均需要使用两台，规定每个进程一次仅允许申请一台，则在不发生死锁的情况下至多允许B个进程参与竞争" class="headerlink" title="19. 若系统中有五台打印机，有多个进程均需要使用两台，规定每个进程一次仅允许申请一台，则在不发生死锁的情况下至多允许B个进程参与竞争"></a>19. 若系统中有五台打印机，有多个进程均需要使用两台，规定每个进程一次仅允许申请一台，则在不发生死锁的情况下至多允许<strong><em>B</em></strong>个进程参与竞争</h4><p>5<br>4<br>3<br>2<br>考察点：操作系统<br>哲学家就餐问题：当5个进程的时候如果都同时申请到了1台，就发生死锁了。如果是4个进程，那必然有一个能申请到2台。</p>
+<h4 id="20-在正方体上任取三个顶点连成三角形，则所得的三角形是直角非等腰三角形的概率为？"><a href="#20-在正方体上任取三个顶点连成三角形，则所得的三角形是直角非等腰三角形的概率为？" class="headerlink" title="20. 在正方体上任取三个顶点连成三角形，则所得的三角形是直角非等腰三角形的概率为？"></a>20. 在正方体上任取三个顶点连成三角形，则所得的三角形是直角非等腰三角形的概率为？</h4><p>1/14<br>4/7<br>2/7<br>3/7<br>解析：<br>共有8个顶点，总的有C（8,3）种选择。<br>直角非等腰：任取某一条边上的两点，取其以对角线为对面的那一条边上两个顶点的任意一个。一共有12条边x2种顶点=24<br>24/C(8,3)=24/56=3/7。</p>
+<h4 id="21-以下哪个是由权值集合-16-8-4-2-构造的哈夫曼树-最优二叉树-A"><a href="#21-以下哪个是由权值集合-16-8-4-2-构造的哈夫曼树-最优二叉树-A" class="headerlink" title="21. 以下哪个是由权值集合(16,8,4,2)构造的哈夫曼树(最优二叉树): A"></a>21. 以下哪个是由权值集合(16,8,4,2)构造的哈夫曼树(最优二叉树): A</h4><p><img src="http://uploadfiles.nowcoder.com/images/20140908/59-a1.png" alt="image"><br><img src="http://uploadfiles.nowcoder.com/images/20140908/59-a2.png" alt="image"><br><img src="http://uploadfiles.nowcoder.com/images/20140908/59-a3.png" alt="image"><br><img src="http://uploadfiles.nowcoder.com/images/20140908/59-a4.png" alt="image"></p>
+<p>解法1:<br>最优二叉树：将所给权集合（称为森林）按照从小到大顺序列举出来，如本题2,4,8,16；<br>第一步：将其中最小的两个数（2,4）作为同一父亲下的孩子，也就是叶，形成值为6的一个父结点；<br>第二步：此时剩下6,8,16三个数，重复步骤一，将6,8结合成又一个值为14的父结点；<br>第三步：将剩下的两个数连接到同一父节点下；<br>解法二：<br>最优二叉树，是指WPL（带权路径长度之和）最小<br>WPL(A)：16<em>1+8</em>2+2<em>3+3</em>4=50<br>WPL(B)：2<em>1+4</em>2+8<em>3+16</em>3=82<br>WPL(C)：16<em>1+4</em>2+8<em>3+2</em>3=54<br>WPL(D)：16<em>2+8</em>2+4<em>2+2</em>2=60<br>所以选A</p>
+<h4 id="21-关于红黑树和AVL树，以下哪种说法不正确？"><a href="#21-关于红黑树和AVL树，以下哪种说法不正确？" class="headerlink" title="21. 关于红黑树和AVL树，以下哪种说法不正确？"></a>21. 关于红黑树和AVL树，以下哪种说法不正确？</h4><p>两者都属于自平衡二叉树<br>两者查找,插入，删除的时间复杂度相同<br>包含n个内部节点的红黑树的高度是O(log(n))<br>JDK的TreeMap是一个AVL的实现</p>
+<p>解析：<br>红黑树和avl树都属于自平衡二叉树；<br>两者查找、插入、删除的时间复杂度相同；<br>包含n个内部结点的红黑树的高度是o(logn);<br>TreeMap是一个红黑树的实现，能保证插入的值保证排序</p>
+<p>详细解析：</p>
+<ul>
+<li><p>红黑树并不追求“完全平衡 ”——它只要求部分地达到平衡要求，降低了对旋转的要求，从而提高了性能。<br>红黑树能够以 O(log2  n)  的时间复杂度进行搜索、插入、删除操作。此外，由于它的设计，任何不平衡都会在三次旋转之内解决。当然，还有一些更好的，但实现起来更复杂的数据结构 能够做到一步旋转之内达到平衡，但红黑树能够给我们一个比较“便宜”的解决方案。红黑树的算法时间复杂度和AVL相同，但统计性能比AVL树更高。</p>
+</li>
+<li><p>AVL树是最先发明的自平衡二叉查 找树。在AVL树中任何节点的两个儿子子树的高度最大差别为一，所以它也被称为高度平衡树。查找、插入和删除在平均和最坏情况下都是O(log n)。增加和删除可能需要通过一次或多次树旋转来重新平衡这个树。</p>
+</li>
+</ul>
+<p>AVL树的定义:<br>一棵AVL树满足以下的条件:<br>1&gt;它的左子树和右子树都是AVL树<br>2&gt;左子树和右子树的高度差不能超过1<br>从条件1可能看出是个递归定义,如GNU一样. </p>
+<p>性质:<br>1&gt;一棵n个结点的AVL树的其高度保持在0(log2(n)),不会超过3/2log2(n+1)<br>2&gt;一棵n个结点的AVL树的平均搜索长度保持在0(log2(n)).<br>3&gt;一棵n个结点的AVL树删除一个结点做平衡化旋转所需要的时间为0(log2(n)). </p>
+<h4 id="23"><a href="#23" class="headerlink" title="23."></a>23.</h4><p>客户端C和服务器S之间建立一个TCP连接，该连接总是以1KB的最大段长发送TCP段，客户端C有足够的数据要发送。当拥塞窗口为16KB的时候发生超时，如果接下来的4个RTT往返时间内的TCP段的传输是成功的，那么当第4个RTT时间内发送的所有TCP段都得到了ACK时，拥塞窗口大小是：C<br>7KB<br>8KB<br>9KB<br>16KB</p>
+<p>考察点： 拥塞避免和慢启动<br>当拥塞发生时（超时或收到重复确认），慢启动门限ssthresh被设置为当前拥塞窗口cwnd大小（题目为16）的一半，即8。同时cwnd重置为1。新的数据被接收，则cwnd增加，规则为ssthresh之前，慢启动，即cwnd指数增长；到达ssthresh之后，拥塞避免，即cwnd加1。<br><img src="http://uploadfiles.nowcoder.com/images/20150909/266279_1441764078523_5727B1BE594E6204088C3DDC603B8B68" alt="image"><br><a href="http://www.cnblogs.com/ggjucheng/archive/2012/02/03/2337420.html" target="_blank" rel="external">详细参考</a></p>
+<h4 id="24-关于epoll和select的区别，哪些说法是正确的？ABC"><a href="#24-关于epoll和select的区别，哪些说法是正确的？ABC" class="headerlink" title="24. 关于epoll和select的区别，哪些说法是正确的？ABC"></a>24. 关于epoll和select的区别，哪些说法是正确的？ABC</h4><p>epoll和select都是I/O多路复用的技术，都可以实现同时监听多个I/O事件的状态<br>epoll相比select效率更高，主要是基于其操作系统支持的IO事件通知机制，而select是基于轮询机制<br>epoll支持水平触发和边沿触发两种模式<br>select能并行支持I/O比较小，且无法修改</p>
+<p>select支持io较少，这个是根据操作系统支持的数量定的，不过记得那个数值可以用sysctl修改，所以觉得d不对。</p>
+<h4 id="25-Internet的网络层含有的协议是？"><a href="#25-Internet的网络层含有的协议是？" class="headerlink" title="25. Internet的网络层含有的协议是？"></a>25. Internet的网络层含有的协议是？</h4><p>IP<br>ICMP<br>ARP<br>RARP</p>
+<p>解析：<br>传输层协议：TCP、UDP、SCTP<br>网络层协议：IP、ARP、RARP、ICMP、IGMP、OSPF<br>应用层协议：http，FTP、SMTP、RIP、DNS<br>TCP（Transmission Control Protocol 传输控制协议）是为应用程序提供完整的传输服务的，是一个传输协议 所以在传输层（Transport layer）而IP是网络传输时逻辑寻址用的，所以在网络层Network layer</p>
+<h4 id="26-以下是C-的不同数据类型值的比较语句，请问这些判断语句中作为条件部分的语句编写有问题的有-CD"><a href="#26-以下是C-的不同数据类型值的比较语句，请问这些判断语句中作为条件部分的语句编写有问题的有-CD" class="headerlink" title="26. 以下是C++的不同数据类型值的比较语句，请问这些判断语句中作为条件部分的语句编写有问题的有:CD"></a>26. 以下是C++的不同数据类型值的比较语句，请问这些判断语句中作为条件部分的语句编写有问题的有:CD</h4><p>如果变量bVar是布尔类型：if(false==bVar){doSomeThing();}<br>如果变量nVar是int型：if(0==nVar){doSomeThing();}<br>如果变量fVar为浮点型:if(0.02=fVar){doSomeThing();}<br>如果变量sVar为字符串型：if（””==sVar){doSomeThing();}</p>
+<p>解析：<br>c选项，float有精度问题，尾数不精确，比较会出问题<br>d选项，字符串比较，一般用strcmp（str1，str2），直接用==比较两个字符串，应该比较的是字符串的首地址是否相等，那就不是真正的字符串比较了</p>
+<h4 id="27-TCP链接中主动断开链接netstat观察可能出现的状态流转是：CD"><a href="#27-TCP链接中主动断开链接netstat观察可能出现的状态流转是：CD" class="headerlink" title="27. TCP链接中主动断开链接netstat观察可能出现的状态流转是：CD"></a>27. TCP链接中主动断开链接netstat观察可能出现的状态流转是：CD</h4><p>ESTABLISHED-&gt;CLOSE_WAIT-&gt;TIME_WAIT-&gt;CLOSED<br>ESTABLISHED-&gt;TIME_WAIT-&gt;CLOSE_WAIT-&gt;CLOSED<br>ESTABLISHED-&gt;FIN_WAIT_1-&gt;FIN_WAIT_2-&gt;TIME_WAIT-&gt;CLOSED<br>ESTABLISHED-&gt;FIN_WAIT_1-&gt;TIME_WAIT-&gt;CLOSED</p>
+<p>解析：<br>跳过FIN_WAIT_2,证明被动方也完成了数据传输任务，直接把ACK和FIN一起发给了主动方，因此主动方从FIN_WAIT_1直接跳过FIN_WAIT_2进入TIME_WAIT<br><img src="http://hi.csdn.net/attachment/201108/7/0_131271823564Rx.gif" alt="image"></p>
+<h4 id="28-以下涉及到内存管理的代码段中，有错误的是：ABD"><a href="#28-以下涉及到内存管理的代码段中，有错误的是：ABD" class="headerlink" title="28. 以下涉及到内存管理的代码段中，有错误的是：ABD"></a>28. 以下涉及到内存管理的代码段中，有错误的是：ABD</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">int *a=new int(12);</div><div class="line">//..... </div><div class="line">free(a);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">int *ip=static_cast&lt;int*&gt;(malloc(sizeof(int)));</div><div class="line">*ip=10;</div><div class="line">//.....</div><div class="line">delete ip;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">double *a=new double[1];</div><div class="line">//.... </div><div class="line">delete a;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">int *ip=new int(12);</div><div class="line">for(int i=0;i&lt;12;++i)&#123;</div><div class="line">ip[i]=i;</div><div class="line">&#125;</div><div class="line">delete []ip;</div></pre></td></tr></table></figure>
+<p>解析：<br>new 和delete 配套使用  free和malloc配套使用.<br>c中a是一个数组，应该用delete []a，但是在基本类型数组来说，delete a和delete []a的效果是一样的。如果，a是一个自定义对象的数组，那么只能用delete []a。<br>关于D，注意new int(12)和new int[12]的区别。new int(12)是生成了一个值为12的int变量，new int[12]才是生成一个大小为12的数组。所以，delete []ip是错误的，D错。</p>
+<h4 id="29-下面哪些特性可能导致代码体积膨胀-ABC"><a href="#29-下面哪些特性可能导致代码体积膨胀-ABC" class="headerlink" title="29. 下面哪些特性可能导致代码体积膨胀:ABC"></a>29. 下面哪些特性可能导致代码体积膨胀:ABC</h4><p>宏定义<br>模板<br>内联函数<br>递归</p>
+<p>解析：<br>A选项宏定义本质是文本替换，肯定是可能导致代码体积膨胀的<br>B选项模板在编译时生成对应的类/函数，所以也是可能的。<br>C选项重点解释，内联也是在编译时替换，所以也 可能导致代码体积膨胀。<br>但是注意了：<br>若这个函数被调用了一次，那么 内联 直接被插入到函数调用出，就直接没有了这个函数符号了，若加上优化，这一句代码可能会被优化没有，所以，也可能使 代码体积减小 。<br>D选项是容易爆栈，不是代码区。</p>
+<h4 id="30-小明设计了如下的学籍管理系统："><a href="#30-小明设计了如下的学籍管理系统：" class="headerlink" title="30.小明设计了如下的学籍管理系统："></a>30.小明设计了如下的学籍管理系统：</h4><p>已知关系：学籍(学号，学生姓名) PK=学号<br>成绩（科目号，成绩，学号） PK=科目代码，FK=学号<br>已有表记录如下，请给出能够插入的成绩记录<br><img src="http://uploadfiles.nowcoder.com/images/20140908/59-4.png" alt="image"><br>(1，99，2)<br>(5，68，1)<br>(3，70，3)<br>(7，45，null)</p>
+<p>成绩表中主键是“PK=科目代码”，所以 科目代码要唯一，所以可排除AC；在数据库完整性里有说：外键必须可以找到或者为空，所以 B是可以的，而D为空，所以也满足。故选BD</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔试／面试/" rel="tag">#笔试／面试</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/16/book-java-collection/" rel="next" title="Java 核心技术卷I - 集合">
+                <i class="fa fa-chevron-left"></i> Java 核心技术卷I - 集合
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/02/2017-tencent-onlie-test/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/ritali.jpg"
+               alt="Ritali" />
+          <p class="site-author-name" itemprop="name">Ritali</p>
+          <p class="site-description motion-element" itemprop="description">live better and better</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Ritali" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/liverita" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/XilianLi" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ritali</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+&nbsp&nbsp|&nbsp&nbsp Total visited- <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp
+|&nbsp&nbsp User visited-<span id="busuanzi_value_site_uv"></span>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
