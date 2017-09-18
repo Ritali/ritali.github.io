@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ritali.github.io/2017/09/18/PR&ROC/</loc>
+    
+    <lastmod>2017-09-18T05:45:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ritali.github.io/2017/04/05/review_dfs/</loc>
     
     <lastmod>2017-04-05T14:20:54.000Z</lastmod>
@@ -51,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://ritali.github.io/tags/index.html</loc>
+    <loc>http://ritali.github.io/2016/10/19/sentiment%20classification/</loc>
     
     <lastmod>2016-10-26T07:08:10.000Z</lastmod>
     
@@ -72,7 +79,7 @@
   </url>
   
   <url>
-    <loc>http://ritali.github.io/2016/10/19/sentiment%20classification/</loc>
+    <loc>http://ritali.github.io/tags/index.html</loc>
     
     <lastmod>2016-10-26T07:08:10.000Z</lastmod>
     

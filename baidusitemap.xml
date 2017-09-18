@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://ritali.github.io/2017/09/18/PR&ROC/</loc>
+    <lastmod>2017-09-18T05:45:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>PR&ROC</title>
+        <pubTime>2017-09-18T03:15:20.000Z</pubTime>
+        
+        <tag>Machine Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Machine Learning" url="http://ritali.github.io/categories/Machine-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ritali.github.io/2017/04/05/review_dfs/</loc>
     <lastmod>2017-04-05T14:20:54.000Z</lastmod>
     <data>
@@ -151,9 +171,6 @@
     </url>
 
     
-    
-    
-    
   <url>
     <loc>http://ritali.github.io/2016/10/19/sentiment%20classification/</loc>
     <lastmod>2016-10-26T07:08:10.000Z</lastmod>
@@ -173,4 +190,7 @@
     </data>
     </url>
 
+    
+    
+    
 </urlset>
