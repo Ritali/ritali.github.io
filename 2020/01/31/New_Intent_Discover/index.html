@@ -1,0 +1,746 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="google-site-verification" content="A3sL883p90l8FNR6rdUF_AS9n9sDSYyaSRP-d2xHok4" />
+<meta name="baidu-site-verification" content="i9pb3atBIC" />
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NLU,Intent Detection,New Intent Discovery,Unsupervised,Cluster," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="New Intent Detection: Identifying the unknown (novel) user intents that have never appeared in the training set is a challenging task in the dialogue system.1. ACL-2019: Deep Unknown Intent Detection">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新意图发现(New/Open Intent Detection) 最新论文合集">
+<meta property="og:url" content="http://ritali.github.io/2020/01/31/New_Intent_Discover/index.html">
+<meta property="og:site_name" content="Ritali's blog">
+<meta property="og:description" content="New Intent Detection: Identifying the unknown (novel) user intents that have never appeared in the training set is a challenging task in the dialogue system.1. ACL-2019: Deep Unknown Intent Detection">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/lmcl_architecture.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/lmcl_result.jpeg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/cadc_plus_architecture.png">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/cadc_result.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/TOP_ID_1.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/TOP_ID_2.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/TOP_ID_result.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/av_kmeans_problem.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/av_kmeans_algorithm.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/av_kmeans_result.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/lssvm_result.jpg">
+<meta property="og:image" content="http://ritali.github.io/images/new_intent_discover/auto_dialabel_model.jpg">
+<meta property="og:updated_time" content="2020-02-02T09:10:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="新意图发现(New/Open Intent Detection) 最新论文合集">
+<meta name="twitter:description" content="New Intent Detection: Identifying the unknown (novel) user intents that have never appeared in the training set is a challenging task in the dialogue system.1. ACL-2019: Deep Unknown Intent Detection">
+<meta name="twitter:image" content="http://ritali.github.io/images/new_intent_discover/lmcl_architecture.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://ritali.github.io/2020/01/31/New_Intent_Discover/"/>
+
+
+  <title> 新意图发现(New/Open Intent Detection) 最新论文合集 | Ritali's blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Ritali's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">live better and better</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                新意图发现(New/Open Intent Detection) 最新论文合集
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2020-01-31T11:15:20+08:00" content="2020-01-31">
+              2020-01-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/NLU/" itemprop="url" rel="index">
+                    <span itemprop="name">NLU</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          <span>&nbsp; | &nbsp; 
+          visited: &nbsp; <span id="busuanzi_value_page_pv" ></span>
+          </span>    
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="New-Intent-Detection-Identifying-the-unknown-novel-user-intents-that-have-never-appeared-in-the-training-set-is-a-challenging-task-in-the-dialogue-system"><a href="#New-Intent-Detection-Identifying-the-unknown-novel-user-intents-that-have-never-appeared-in-the-training-set-is-a-challenging-task-in-the-dialogue-system" class="headerlink" title="New Intent Detection: Identifying the unknown (novel) user intents that have never appeared in the training set is a challenging task in the dialogue system."></a>New Intent Detection: Identifying the unknown (novel) user intents that have never appeared in the training set is a challenging task in the dialogue system.</h5><h4 id="1-ACL-2019-Deep-Unknown-Intent-Detection-with-Margin-Loss"><a href="#1-ACL-2019-Deep-Unknown-Intent-Detection-with-Margin-Loss" class="headerlink" title="1. ACL-2019: Deep Unknown Intent Detection with Margin Loss."></a>1. ACL-2019: Deep Unknown Intent Detection with Margin Loss.</h4><p>优点：模型看起来较简单，缺点：只能检测unknown intent。可作为检测未知意图的一种简单方案。<br>推荐指数＊＊＊＊。<br>code: <a href="https://github.com/thuiar/DeepUnkID" target="_blank" rel="external">https://github.com/thuiar/DeepUnkID</a>  </p>
+<h5 id="1-1-摘要"><a href="#1-1-摘要" class="headerlink" title="1.1 摘要"></a>1.1 摘要</h5><p>检测一个句子属于特定intent class还是属于unknown intent(group unknown intents into a single class)。其中unknown intent可能是out-of-intent，但训练过程不需要out-of-intent的数据。  </p>
+<h5 id="1-2-方法：定位为分类问题。"><a href="#1-2-方法：定位为分类问题。" class="headerlink" title="1.2 方法：定位为分类问题。"></a>1.2 方法：定位为分类问题。</h5><p>第一阶段－extract deep features: BiLSTM + LMCL(Large Margin Cosine Loss) ；<br>第二阶段－detect unknown intents：LOF(Local Outlier Factor)。<br><img src="/images/new_intent_discover/lmcl_architecture.jpg" alt="lmcl_architecture"><br>－ LMCL(替换softmax)目的：最大化类间方差和最小化类内方差。通过对特征向量和权重向量进行L2归一化以消除径向变化，将softmax loss表示为cosine loss。在此基础上，引入余弦间隔（margin），进一步最大化角空间中的间距（角间距）。  提出时用于人脸识别。<br>－ LOF(局部异常因子)目的：异常检测。通过计算一个数值score来反映一个样本的异常程度。这个数值的大致意思是：一个样本点周围的样本点所处位置的平均密度比上该样本点所在位置的密度。比值越大于1，则该点所在位置的密度越小于其周围样本所在位置的密度，这个点就越有可能是异常点。  </p>
+<h5 id="1-3-实验"><a href="#1-3-实验" class="headerlink" title="1.3 实验"></a>1.3 实验</h5><p>train选择部分类别作为unknown，test使用全部类别。<br><img src="/images/new_intent_discover/lmcl_result.jpeg" alt="lmcl_result"><br>注：known intents比例越高，越不易判断是不是unknown。   </p>
+<h5 id="1-4-主要参考文献"><a href="#1-4-主要参考文献" class="headerlink" title="1.4 主要参考文献"></a>1.4 主要参考文献</h5><p>1）Feng Wang, Jian Cheng, Weiyang Liu, and Haijun Liu. 2018a. <a href="https://arxiv.org/abs/1801.05599" target="_blank" rel="external">Additive margin softmax for face verification.</a> IEEE Signal Processing Letters, 25(7):926–930.<br>code: <a href="https://github.com/happynear/AMSoftmax" target="_blank" rel="external">https://github.com/happynear/AMSoftmax</a><br>2）Markus M Breunig, Hans-Peter Kriegel, Raymond T Ng,andJo ̈rgSander.2000.<a href="https://www.researchgate.net/publication/221214719_LOF_Identifying_Density-Based_Local_Outliers" target="_blank" rel="external">Lof:identifyingdensity based local outliers.</a> In ACM sigmod record, volume 29, pages 93–104.</p>
+<h4 id="2-AAAI-2020-CADC-plus-Discovering-New-Intents-via-Constrained-Deep-Adaptive-Clustering-with-Cluster-Refinement"><a href="#2-AAAI-2020-CADC-plus-Discovering-New-Intents-via-Constrained-Deep-Adaptive-Clustering-with-Cluster-Refinement" class="headerlink" title="2. AAAI-2020(CADC-plus): Discovering New Intents via Constrained Deep Adaptive Clustering with Cluster Refinement."></a>2. AAAI-2020(CADC-plus): Discovering New Intents via Constrained Deep Adaptive Clustering with Cluster Refinement.</h4><p>优点：端到端的intent聚类方法，缺点：假设一个句子只有一个intent。<br>推荐指数＊＊＊＊＊。<br>与上篇同作者，code: <a href="https://github.com/thuiar/CDAC-plus" target="_blank" rel="external">https://github.com/thuiar/CDAC-plus</a>   </p>
+<h5 id="2-1-摘要：定位为聚类问题。"><a href="#2-1-摘要：定位为聚类问题。" class="headerlink" title="2.1 摘要：定位为聚类问题。"></a>2.1 摘要：定位为聚类问题。</h5><p>现有方法依赖复杂的特征工程，容易过拟合并且对cluster数目较敏感。本文提出一个端到端的intent聚类方法。题目的几个关键词，Constrained指利用少量的label data；Deep Adaptive Clusterin（DAC）指获取pairwise－classification作为先验知识；Cluster Refinement指利用KLD-loss refine the clusters，使得模型对cluster数目不敏感。  </p>
+<h5 id="2-2-方法：假设每个句子只有一个intent，模型分为3段式，"><a href="#2-2-方法：假设每个句子只有一个intent，模型分为3段式，" class="headerlink" title="2.2 方法：假设每个句子只有一个intent，模型分为3段式，"></a>2.2 方法：假设每个句子只有一个intent，模型分为3段式，</h5><p>step 1. 利用BERT获取intent representations；<br>step 2. 利用句子对是否相似构造 pairwise－classification任务；<br>step 3. Cluster Refinement with KLD loss。<br><img src="/images/new_intent_discover/cadc_plus_architecture.png" alt="cadc_plus_architecture">   </p>
+<h5 id="2-3-实验"><a href="#2-3-实验" class="headerlink" title="2.3 实验"></a>2.3 实验</h5><p>train选择25%的类别作为unknown，10%的类别作为label data。<br><img src="/images/new_intent_discover/cadc_result.jpg" alt="cadc_result">  </p>
+<h4 id="3-ACM-2019-TOP-ID-Towards-Open-Intent-Discovery-for-Conversational-Text"><a href="#3-ACM-2019-TOP-ID-Towards-Open-Intent-Discovery-for-Conversational-Text" class="headerlink" title="3. ACM-2019(TOP-ID): Towards Open Intent Discovery for Conversational Text."></a>3. ACM-2019(TOP-ID): Towards Open Intent Discovery for Conversational Text.</h4><p>优点：可挖掘比较细致的新意图，缺点：模型细节较复杂无源码。<br>推荐指数＊＊＊＊。</p>
+<h5 id="3-1-摘要"><a href="#3-1-摘要" class="headerlink" title="3.1 摘要"></a>3.1 摘要</h5><p>将open intent discoverry看作<strong>sequence tagging</strong> problem。适用于异步对话系统发现新意图。</p>
+<h5 id="3-2-方法：定位为序列标注问题"><a href="#3-2-方法：定位为序列标注问题" class="headerlink" title="3.2 方法：定位为序列标注问题"></a>3.2 方法：定位为序列标注问题</h5><p>Bi-LSTM ＋ CRF + Mulit-Head Attention + Adversarial Training。 We consider three tags: Action, Object, and None (denotes all the remaining words or phrases in the text utterance that are neither an Action nor an Object), 主要分为2阶段：<br>step1: open intent existence<br><img src="/images/new_intent_discover/TOP_ID_1.jpg" alt="TOP_ID_STEP_1"><br>step2: open intent extraction<br> Bi-LSTM(adversarial training and attention) + CRF<br><img src="/images/new_intent_discover/TOP_ID_2.jpg" alt="TOP_ID_STEP_2"><br>Add adversarial noise at the embedding layer.</p>
+<h5 id="3-3-实验"><a href="#3-3-实验" class="headerlink" title="3.3 实验"></a>3.3 实验</h5><p><img src="/images/new_intent_discover/TOP_ID_result.jpg" alt="TOP_ID_result">  </p>
+<h4 id="4-EMNLP-2019-AV-KMEANS-Dialog-Intent-Induction-with-Deep-Multi-View-Clustering"><a href="#4-EMNLP-2019-AV-KMEANS-Dialog-Intent-Induction-with-Deep-Multi-View-Clustering" class="headerlink" title="4. EMNLP-2019(AV-KMEANS): Dialog Intent Induction with Deep Multi-View Clustering."></a>4. EMNLP-2019(AV-KMEANS): Dialog Intent Induction with Deep Multi-View Clustering.</h4><p>优点：利用多视图聚类方案，考虑到上下文信息，缺点：概念描述不是很清楚，多个视图的划分策略没理由说明，且效果看起来不是很有竞争力。<br>推荐指数＊＊＊。<br>code: <a href="https://github.com/asappresearch/dialog-intent-induction" target="_blank" rel="external">https://github.com/asappresearch/dialog-intent-induction</a>.  </p>
+<h5 id="4-1-摘要"><a href="#4-1-摘要" class="headerlink" title="4.1  摘要"></a>4.1  摘要</h5><p>自动挖掘对话意图。聚焦于发现抽象意图，如“BookFlight”，而不关注详细意图如“departure date” and “destination”。<br>本文基于multi-view clustering提出一个alternating-view k-means (AV-KMEANS) for joint multi-view representation learning and clustering analysis. 其中multi－view包括query view and content view。按文章的描述理解query view 指一段对话的第一条query，content view指这段对话其余的query＋answer（感觉有点牵强，文章介绍的不是很清楚）。joint multi－view representation按文章描述体现在2个view的embedding相互作用。  </p>
+<h5 id="4-2-问题"><a href="#4-2-问题" class="headerlink" title="4.2 问题"></a>4.2 问题</h5><p><img src="/images/new_intent_discover/av_kmeans_problem.jpg" alt="av_kmeans_problem"><br>query view不相似，但是content view（答案）很相似。</p>
+<h5 id="4-3-方法：定位为聚类＋分类问题。"><a href="#4-3-方法：定位为聚类＋分类问题。" class="headerlink" title="4.3 方法：定位为聚类＋分类问题。"></a>4.3 方法：定位为聚类＋分类问题。</h5><p>AV-KMEANS学习joint representation and multi－view cluster。 view 1 负责cluster，view 2负责classification，并且view 1的cluster assignment被用于view 2，两个view相互迭代。<br><img src="/images/new_intent_discover/av_kmeans_algorithm.jpg" alt="av_kmeans_algorithm"><br>1个data point ／ instance应该指的是dialog的1条数据。概念介绍不清楚。  </p>
+<h5 id="4-4-实验"><a href="#4-4-实验" class="headerlink" title="4.4 实验"></a>4.4 实验</h5><p><img src="/images/new_intent_discover/av_kmeans_result.jpg" alt="av_kmeans_result"><br>kmeans代表single－view的聚类方法，但是kmeans＋quick thoughts的效果优于MVSC+quick thoughts不是很能理解，文章提到quick thoughts注入了content view的信息。</p>
+<h5 id="4-5-主要参考文献"><a href="#4-5-主要参考文献" class="headerlink" title="4.5 主要参考文献"></a>4.5 主要参考文献</h5><p>1）Jake Snell, Kevin Swersky, and Richard Zemel. 2017. Prototypical networks for few-shot learning. In Neural Information Processing Systems (NIPS). 文章用此方法可以 Solely rely on the encoders to form the classifiers instead of introducing additional classification layers.<br>2）Lajanugen Logeswaran and Honglak Lee. 2018. An efficient framework for learning sentence representations. In Proceedings of the International Conference on Learning Representations (ICLR). 文中的quick thoughts.</p>
+<h4 id="5-EMNLP-2018-LSSVM-Supervised-Clustering-of-Questions-into-Intents-for-Dialog-System-Applications"><a href="#5-EMNLP-2018-LSSVM-Supervised-Clustering-of-Questions-into-Intents-for-Dialog-System-Applications" class="headerlink" title="5. EMNLP-2018(LSSVM): Supervised Clustering of Questions into Intents for Dialog System Applications"></a>5. EMNLP-2018(LSSVM): Supervised Clustering of Questions into Intents for Dialog System Applications</h4><p>优点：不好说，缺点：虽然是聚类方案但需要标注数据；速度应该不快。<br>实验部分说明使用的模型为开源的LSSVM+实现的simlarity classifier。<br>推荐指数＊＊＊。<br>data &amp; software(in nearest future): <a href="https://ikernels-portal.disi.unitn.it/repository/intent-qa/" target="_blank" rel="external">https://ikernels-portal.disi.unitn.it/repository/intent-qa/</a></p>
+<h5 id="5-1-摘要"><a href="#5-1-摘要" class="headerlink" title="5.1 摘要"></a>5.1 摘要</h5><p>We developed a model for automatically clustering questions into user intents to help the design tasks. Since questions are short texts, uncovering their semantics to group them together can be very challenging. We approach the problem by using powerful semantic classifiers from question duplicate/matching research along with a novel idea of supervised clustering methods based on structured output. 主要用于辅助intent的创建过程。 </p>
+<h5 id="5-2-方法：相似度模型＋有监督聚类"><a href="#5-2-方法：相似度模型＋有监督聚类" class="headerlink" title="5.2 方法：相似度模型＋有监督聚类"></a>5.2 方法：相似度模型＋有监督聚类</h5><p>1）Pairwise similarity model for short texts.<br>2）The superwised clustering approach builds on top of the pairwise similarity, using structured output modelling. </p>
+<h5 id="5-3-实验"><a href="#5-3-实验" class="headerlink" title="5.3 实验"></a>5.3 实验</h5><p>数据：<br>1）Quora 相似问题对二次加工：利用传递性得到question clusters，然后重新标注 intents &amp; slots。<br>2）FAQ HYPE intent corpus直接使用。<br>实验效果指明训练数据有点少。<br><img src="/images/new_intent_discover/lssvm_result.jpg" alt="lssvm_result"></p>
+<h5 id="5-4-主要参考文献"><a href="#5-4-主要参考文献" class="headerlink" title="5.4 主要参考文献"></a>5.4 主要参考文献</h5><p>1）LSSVM: <a href="http://www.cs.cornell.edu/~cnyu/papers/icml09_latentssvm.pdf" target="_blank" rel="external">http://www.cs.cornell.edu/~cnyu/papers/icml09_latentssvm.pdf</a>  </p>
+<p>思考问题：<br>    1）supervised clustering and classification的区别？<br>    2）文章提到的structured out 和 supervised clustering的关系？</p>
+<h4 id="6-ACL-2018-Auto-Dialabel-Labeling-Dialogue-Data-with-Unsupervised"><a href="#6-ACL-2018-Auto-Dialabel-Labeling-Dialogue-Data-with-Unsupervised" class="headerlink" title="6. ACL-2018 Auto-Dialabel: Labeling Dialogue Data with Unsupervised"></a>6. ACL-2018 Auto-Dialabel: Labeling Dialogue Data with Unsupervised</h4><p>优点：无监督，模型简单直观；缺点：复杂的特征工程，从实验结果来看，主要是cluster方法起决定性作用。<br>推荐指数：＊＊＊。   </p>
+<h5 id="摘要-amp-方法"><a href="#摘要-amp-方法" class="headerlink" title="摘要&amp;方法"></a>摘要&amp;方法</h5><p>构造多种上下文特征，利用无监督方法自动对对话intent和slot进行聚类。<br><img src="/images/new_intent_discover/auto_dialabel_model.jpg" alt="auto_dialabel_model"><br>AutoEncoder：feature assemble<br>Hierarchical Clustering: intent cluster  </p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><table>
+<thead>
+<tr>
+<th>model</th>
+<th>detail</th>
+<th>keywords</th>
+<th>code</th>
+<th>推荐指数  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. LMCL+LOF (ACL-2019)</td>
+<td>定位为分类问题，检测一个句子属于特定intent class还是属于unknown intent。</td>
+<td>BiLSTM + LMCL + LOF</td>
+<td><a href="https://github.com/thuiar/DeepUnkID" target="_blank" rel="external">https://github.com/thuiar/DeepUnkID</a></td>
+<td>＊＊＊＊  </td>
+</tr>
+<tr>
+<td>2. CADC-plus (AAAI-2020)</td>
+<td>定位为聚类问题，利用少量的label data完成end to end的intent cluster，并且对cluster number不敏感。</td>
+<td>Deep Adaptive Clusterin（DAC); intent representations by BERT; pairwise－classification; Cluster Refinement with KLD loss</td>
+<td><a href="https://github.com/thuiar/CDAC-plus" target="_blank" rel="external">https://github.com/thuiar/CDAC-plus</a></td>
+<td>＊＊＊＊＊  </td>
+</tr>
+<tr>
+<td>3. TOP-ID (ACM-2019)</td>
+<td>定位为序列标注问题，擅长输出较详细的intent</td>
+<td>Bi-LSTM + CRF + Mulit-Head Attention + Adversarial Training</td>
+<td>no</td>
+<td>＊＊＊＊  </td>
+</tr>
+<tr>
+<td>4. AV-KMEANS (EMNLP-2019)</td>
+<td>定位为聚类＋分类问题，同3对比擅长发现抽象意图</td>
+<td>Multi-view Clustering</td>
+<td><a href="https://github.com/asappresearch/dialog-intent-induction" target="_blank" rel="external">https://github.com/asappresearch/dialog-intent-induction</a></td>
+<td>＊＊＊＊     </td>
+</tr>
+<tr>
+<td>5. LSSVM (EMNLP-2018)</td>
+<td>相似度模型＋有监督聚类</td>
+<td>Pairwise Similarity; Supervised Clustering</td>
+<td>in future: <a href="https://ikernels-portal.disi.unitn.it/repository/intent-qa/" target="_blank" rel="external">https://ikernels-portal.disi.unitn.it/repository/intent-qa/</a></td>
+<td>＊＊＊ </td>
+</tr>
+<tr>
+<td>6. Auto-Dialabel (ACL-2018 短文)</td>
+<td>定位为聚类问题，需要构造复杂的特征</td>
+<td>AutoEncoder; Hierarchical Clustering</td>
+<td>no</td>
+<td>＊＊＊  </td>
+</tr>
+</tbody>
+</table>
+<p>更多详细内容待补充……</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/NLU/" rel="tag">#NLU</a>
+          
+            <a href="/tags/Intent-Detection/" rel="tag">#Intent Detection</a>
+          
+            <a href="/tags/New-Intent-Discovery/" rel="tag">#New Intent Discovery</a>
+          
+            <a href="/tags/Unsupervised/" rel="tag">#Unsupervised</a>
+          
+            <a href="/tags/Cluster/" rel="tag">#Cluster</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/18/PR&ROC/" rel="next" title="PR&ROC">
+                <i class="fa fa-chevron-left"></i> PR&ROC
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/ritali.jpg"
+               alt="Ritali" />
+          <p class="site-author-name" itemprop="name">Ritali</p>
+          <p class="site-description motion-element" itemprop="description">live better and better</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Ritali" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/liverita" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/XilianLi" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ritali</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+&nbsp&nbsp|&nbsp&nbsp Total visited- <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp
+|&nbsp&nbsp User visited-<span id="busuanzi_value_site_uv"></span>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
